@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: primero.aiml -->
+<!-- Author: Brais Fontan Costas -->
+<!-- Last modified: 28/02/2020 -->
+<category><pattern>SALUDO</pattern>
+<template>Hola :)</template>
+</category>
+
+<category><pattern>hola ^</pattern>
+<template><srai>SALUDO<srai/></template>
+</category>
+
+<category><pattern>Buenos *</pattern>
+<template><srai>SALUDO<srai/></template>
+</category>
+
+<category><pattern>Buenas *</pattern>
+<template><srai>SALUDO<srai/></template>
+</category>
+
+
+</aiml>
