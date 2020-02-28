@@ -8,18 +8,18 @@
 </category>
 
 <category><pattern>hola ^</pattern>
-<template><srai>SALUDO<srai/></template>
+<template><srai>SALUDO</srai></template>
 </category>
 
 <category><pattern>Buenos *</pattern>
-<template><srai>SALUDO<srai/></template>
+<template><srai>SALUDO</srai></template>
 </category>
 
 <category><pattern>Buenas *</pattern>
-<template><srai>SALUDO<srai/></template>
+<template><srai>SALUDO</srai></template>
 </category>
 
-<category><pattern>Es <set>color<set/> un color</pattern>
+<category><pattern>Es <set>color</set> un color</pattern>
 <template>Si, <star/> es un color</template>
 </category>
 
