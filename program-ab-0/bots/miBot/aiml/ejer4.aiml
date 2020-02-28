@@ -3,41 +3,21 @@
 <!-- File: primero.aiml -->
 <!-- Author: Brais Fontan Costas -->
 <!-- Last modified: 28/02/2020 -->
-<category><pattern>SALUDO</pattern>
-<template>Hola :)</template>
+<category><pattern>que companheros tiene el pelo *</pattern>
+<template>
+	<think>
+		<set var="contador"></set>
+		<set var="salida"></set>
+	</think>
+	<condition var = "contador">
+		<li>
+			<value><map name="ojos"></map><get var=""></value>
+			<set var="salida"><get var="salida"/>, <get var="contador"/></set>
+		</li>
+	</condition>
+
+</template>
 </category>
 
-<category><pattern>hola ^</pattern>
-<template><srai>SALUDO<srai/></template>
-</category>
-
-<category><pattern>Buenos *</pattern>
-<template><srai>SALUDO<srai/></template>
-</category>
-
-<category><pattern>Buenas *</pattern>
-<template><srai>SALUDO<srai/></template>
-</category>
-
-<category><pattern>Es <set>color<set/> un color</pattern>
-<template>Si, <star/> es un color</template>
-</category>
-
-<category><pattern>Es * un color</pattern>
-<template>No, <star/> es un color</template>
-</category>
-
-<category><pattern>Cual es la capital de <set>pais</set></pattern>
-<template>La capital de <star/> es <map name = "capital" ><star/></map></template>
-</category>
-
-<category><pattern>Cual es la capital de <set>pais</set></pattern>
-<template>No me se la capital de<star/></template>
-</category>
-
-<!-- Caso Base -->
-<category><pattern>*</pattern>
-<template>MAMA MIA MARCELLO!!</template>
-</category>
 
 </aiml>
