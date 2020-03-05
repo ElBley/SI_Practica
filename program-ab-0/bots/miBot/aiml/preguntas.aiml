@@ -80,7 +80,7 @@ La ESEI se encuentra en el campus de Ourense, concretamente en Campus As Lagoas,
 <!-- Pregunta 2v2 -->
 
 <category>
-<pattern>Donde esta la <set>sinonimosesei</set></pattern> <!--Donde esta la esei-->
+<pattern>^ Donde esta la <set>sinonimosesei</set></pattern> <!--Donde esta la esei-->
 <template>
 <srai>Ubicacion ESEI</srai>
 </template>
@@ -89,7 +89,7 @@ La ESEI se encuentra en el campus de Ourense, concretamente en Campus As Lagoas,
 <!-- Pregunta 2v4 -->
 
 <category>
-<pattern>donde se encuentra la <set>sinonimosesei</set></pattern> <!--Donde se encuentra la esei-->
+<pattern>^ donde se encuentra la <set>sinonimosesei</set></pattern> <!--Donde se encuentra la esei-->
 <template>
 <srai>Ubicacion ESEI</srai>
 </template>
@@ -98,7 +98,7 @@ La ESEI se encuentra en el campus de Ourense, concretamente en Campus As Lagoas,
 <!-- Pregunta 2v5 -->
 
 <category>
-<pattern>donde se halla la <set>sinonimosesei</set></pattern> <!--Donde se halla la esei-->
+<pattern>^ donde se halla la <set>sinonimosesei</set></pattern> <!--Donde se halla la esei-->
 <template>
 <srai>Ubicacion ESEI</srai>
 </template>
@@ -125,7 +125,7 @@ La ESEI se encuentra en el campus de Ourense, concretamente en Campus As Lagoas,
 <!-- Pregunta 2v8 -->
 
 <category>
-<pattern>en que lugar * la <set>sinonimosesei</set></pattern><!--en que lugar esta/se halla la esei-->
+<pattern>^ en que lugar * la <set>sinonimosesei</set></pattern><!--en que lugar esta/se halla la esei-->
 <template>
 <srai>Ubicacion ESEI</srai>
 </template>
@@ -134,7 +134,7 @@ La ESEI se encuentra en el campus de Ourense, concretamente en Campus As Lagoas,
 <!-- Pregunta 2v9 -->
 
 <category>
-<pattern>como puedo <set>sinonimosir</set> * <set>sinonimosesei</set></pattern> <!--como puedo ir/hallar/encontrar la esei-->
+<pattern>^ como puedo <set>sinonimosir</set> * <set>sinonimosesei</set></pattern> <!--como puedo ir/hallar/encontrar la esei-->
 <template>
 <srai>Ubicacion ESEI</srai>
 </template>
@@ -189,7 +189,7 @@ En la ESEI se puede estudiar: Grado en Ingenieria Informatica, doble grado ADE +
 <!-- Pregunta 3v5 -->
 
 <category>
-<pattern>que <set>sinonimosoferta</set> formativa * la <set>sinonimosesei</set></pattern> <!-- ¿que oferta/opciones formativa tiene la esei? -->
+<pattern>^ que <set>sinonimosoferta</set> formativa * la <set>sinonimosesei</set></pattern> <!-- ¿que oferta/opciones formativa tiene la esei? -->
 <template>
 <srai>Estudios ESEI</srai>
 </template>
@@ -215,7 +215,7 @@ En la ESEI se puede estudiar: Grado en Ingenieria Informatica, doble grado ADE +
 <!-- Pregunta 4v1 -->
 
 <category>
-<pattern>Por que * la pena * en la <set>sinonimosesei</set></pattern> <!-- porque vale la pena estudiar en la esei -->
+<pattern>^ Por que * la pena * en la <set>sinonimosesei</set></pattern> <!-- porque vale la pena estudiar en la esei -->
 <template>
 <srai>pena ESEI</srai>
 </template>
@@ -233,7 +233,7 @@ En la ESEI se puede estudiar: Grado en Ingenieria Informatica, doble grado ADE +
 <!-- Pregunta 4v3 -->
 
 <category>
-<pattern>Por que deberia * en la <set>sinonimosesei</set></pattern> <!--por que deberia estudiar en la esei -->
+<pattern>^ Por que deberia * en la <set>sinonimosesei</set></pattern> <!--por que deberia estudiar en la esei -->
 <template>
 <srai>pena ESEI</srai>
 </template>
@@ -299,7 +299,7 @@ La secretaria esta en el edificio politecnico, a la derecha entrando a la planta
 <!-- Pregunta 6v4 -->
 
 <category>
-<pattern>* esta la secretaria la <set>sinonimosesei</set></pattern> <!-- en que lugar esta la secretaria de la esei-->
+<pattern>* esta la secretaria de la <set>sinonimosesei</set></pattern> <!-- en que lugar esta la secretaria de la esei-->
 <template>
 <srai>secretaria ESEI</srai>
 </template>
@@ -341,9 +341,28 @@ La secretaria esta en el edificio politecnico, a la derecha entrando a la planta
 
 <!-- Regla 7v3 -->
 <category>
-<pattern>* horario * atencion al publico</pattern> <!-- Cual es el horario que tiene la secretaria del centro de atencion al publico  -->
+<pattern>* horario * atencion al publico ^</pattern> <!-- Cual es el horario que tiene la secretaria del centro de atencion al publico  -->
 <template><srai>HORARIOSECRETARIA</srai></template>
 </category>
+
+<!-- Regla 7v4 -->
+<category>
+<pattern>* hora * atiencion al publico ^</pattern> <!-- Cual es la hora que tiene la secretaria del centro de atencion al publico  -->
+<template><srai>HORARIOSECRETARIA</srai></template>
+</category>
+
+<!-- Regla 7v5 -->
+<category>
+<pattern>* hora ^ atendiden al publico ^</pattern> <!--A que hora atienden al publico en la secretaria   -->
+<template><srai>HORARIOSECRETARIA</srai></template>
+</category>
+
+<!-- Regla 7v6 -->
+<category>
+<pattern>* hora * atender ^</pattern> <!-- A que hora me pueden atender en la secretaria  -->
+<template><srai>HORARIOSECRETARIA</srai></template>
+</category>
+
 
 
 <!-- Pregunta 8 -->
@@ -387,7 +406,7 @@ Primero se comunica al centro el nombre el alumno para dar a conocerlo entre la 
 <!-- Regla 10v1 -->
 <category>
 <pattern>DELEGACIONALUMNOS</pattern>
-<template>Sí, la ESEIDA. Cada dos años los estudiantes eligen a sus representantes de la ESEI y de la UVigo. Puedes contactar con la Delegación mediante el correo eseida@esei.uvigo.es .</template>
+<template>Si, la ESEIDA. Cada dos años los estudiantes eligen a sus representantes de la ESEI y de la UVigo. Puedes contactar con la Delegación mediante el correo eseida@esei.uvigo.es .</template>
 </category>
 
 <!-- Regla 10v2 -->
@@ -433,7 +452,7 @@ Primero se comunica al centro el nombre el alumno para dar a conocerlo entre la 
 
 <!-- Regla 12v2 -->
 <category>
-<pattern>* practicas *</pattern> <!-- Dónde puedo consultar la oferta de prácticas en empresas -->
+<pattern>* <set>sinonimostipo</set> de practicas ^</pattern> <!-- Que variantes hay de practicas? -->
 <template><srai>PRACTICASESEI</srai></template>
 </category>
 
@@ -444,7 +463,7 @@ Primero se comunica al centro el nombre el alumno para dar a conocerlo entre la 
 <category>
 <pattern>DONDE PRACTICAS</pattern> 
 <template>La ESEI publica al principio del cuatrimestre las ofertas de practicas para el mismo en el siguiente enlace: https://esei.uvigo.es/docencia/practicas-en-empresa
-Por otro lado si quieres realizar prácticas extracurriculares puedes negociar tu mismo con la empresa las condiciones de las prácticas y que luego esta firme un convenio con la universidad para que te convaliden las horas.
+Por otro lado si quieres realizar practicas extracurriculares puedes negociar tu mismo con la empresa las condiciones de las prácticas y que luego esta firme un convenio con la universidad para que te convaliden las horas.
 </template>
 </category>
 
@@ -455,38 +474,32 @@ Por otro lado si quieres realizar prácticas extracurriculares puedes negociar t
 <template><srai>DONDE PRACTICAS</srai></template>
 </category>
 
+<!-- Regla 13v2 -->
+<category>
+<pattern>* practicas ^ ofertadas^</pattern> <!-- Donde puedo consultar la practicas ofertadas -->
+<template><srai>DONDE PRACTICAS</srai></template>
+</category>
+
 
 <!-- Pregunta 14 -->
 <!-- Regla 14v1 -->
 <category>
 <pattern>RECURSOS</pattern>
-<template>La ESEI tiene dedicado a la enseñanza una serie de 6 aulas dedicadas a las clases de teoría y 14 aulas dedicadas a las clases prácticas. También existen dos salones tipo auditorio, dedicados para charlas, eventos y exámenes. 
-Pero es de especial interés para el alumnado los recursos dedicados al estudio, como una sala de estudio localizada en la planta baja, una sala de libre acceso localizada en el sótano y una serie de seminarios a la disposición del alumnado para estudiar y realizar trabajos en grupo. 
-También cabe mencionar la conserjería, la administración y la delegación de alumnos son lugares a los que puedes ir a preguntar si tienes alguna duda acerca de la ESEI, además de a mi.
+<template>La ESEI tiene dedicado a la enseñanza una serie de 6 aulas dedicadas a las clases de teoría y 14 aulas dedicadas a las clases practicas. También existen dos salones tipo auditorio, dedicados para charlas, eventos y examenes. 
+Pero es de especial interés para el alumnado los recursos dedicados al estudio, como una sala de estudio localizada en la planta baja, una sala de libre acceso localizada en el sotano y una serie de seminarios a la disposición del alumnado para estudiar y realizar trabajos en grupo. 
+Tambien cabe mencionar la conserjeria, la administracion y la delegacion de alumnos son lugares a los que puedes ir a preguntar si tienes alguna duda acerca de la ESEI, además de a mi.
 </template>
 </category>
 
 <!-- Regla 14v2 -->
 <category>
-<pattern>* recursos * <set>sinonimosesei</set></pattern> <!-- Con qué recursos materiales cuenta la ESEI -->
+<pattern>* <set>sinonimosrecursos</set> * <set>sinonimosesei</set></pattern> <!-- Con qué recursos materiales cuenta la ESEI -->
 <template><srai>RECURSOS</srai></template>
 </category>
 
 <!-- Regla 14v3 -->
 <category>
-<pattern>* <set>sinonimosesei</set> * recursos ^</pattern> <!-- la esei cuenta con recursos materiales -->
-<template><srai>RECURSOS</srai></template>
-</category>
-
-<!-- Regla 14v4 -->
-<category>
-<pattern>* servicios * <set>sinonimosesei</set></pattern> <!-- Con qué servicios cuenta la ESEI -->
-<template><srai>RECURSOS</srai></template>
-</category>
-
-<!-- Regla 14v5 -->
-<category>
-<pattern>* <set>sinonimosesei</set>* servicios ^</pattern> <!-- la esei cuenta con servicios -->
+<pattern>* <set>sinonimosesei</set> * <set>sinonimosrecursos</set> ^</pattern> <!-- la esei cuenta con recursos materiales -->
 <template><srai>RECURSOS</srai></template>
 </category>
 
@@ -496,13 +509,13 @@ También cabe mencionar la conserjería, la administración y la delegación de 
 <category>
 <pattern>TFG</pattern>
 <template>
-	Es necesario realizar un trabajo al finalizar tanto la carrera como el máster. El trabajo ha de ser tutelado por algún profesor del centro. La asignación de trabajos puede ser directa, por acuerdo propio entre estudiante y profesor; o por peticion, seleccionadas por el alumnado a partir de las propuestas ofrecidas por el profesorado.
+	Es necesario realizar un trabajo al finalizar tanto la carrera como el master. El trabajo ha de ser tutelado por algun profesor del centro. La asignacion de trabajos puede ser directa, por acuerdo propio entre estudiante y profesor; o por peticion, seleccionadas por el alumnado a partir de las propuestas ofrecidas por el profesorado.
 </template>
 </category>
 
 <!-- Regla 15v2 -->
 <category>
-<pattern>* <set>sinonimostfg</set>^</pattern> <!-- Qué son los Trabajos Fin de Grado o de Máster -->
+<pattern>* <set>sinonimostfg</set> ^</pattern> <!-- Qué son los Trabajos Fin de Grado o de Máster -->
 <template><srai>TFG</srai></template>
 </category>
 
@@ -531,31 +544,13 @@ También cabe mencionar la conserjería, la administración y la delegación de 
 <category>
 <pattern>ASISTENCIA</pattern>
 <template>
-	Los profesores realizan control de asistencia en los exámenes y revisiones haciendo un registro donde hay que firmar conforme asististe. En algunos de estos casos es necesario también enseñar el DNI o algún tipo de indentificador para evitar el fraude de identidad.
+	Los profesores realizan control de asistencia en los examenes y revisiones haciendo un registro donde hay que firmar conforme asististe. En algunos de estos casos es necesario también enseñar el DNI o algún tipo de indentificador para evitar el fraude de identidad.
 </template>
 </category>
 
 <!-- Regla 17v2 -->
 <category>
-<pattern>* asistencia * evaluacion ^</pattern> <!-- Cómo puedo justificar mi asistencia a las actividades de evaluación  -->
-<template><srai>ASISTENCIA</srai></template>
-</category>
-
-<!-- Regla 17v3 -->
-<category>
-<pattern>* asistencia * evaluaciones ^</pattern> <!-- Cómo puedo justificar mi asistencia a las actividades de evaluación  -->
-<template><srai>ASISTENCIA</srai></template>
-</category>
-
-<!-- Regla 17v4 -->
-<category>
-<pattern>* asistencia * revision ^</pattern> <!-- Cómo puedo justificar mi asistencia a las revisiones -->
-<template><srai>ASISTENCIA</srai></template>
-</category>
-
-<!-- Regla 17v5 -->
-<category>
-<pattern>* asistencia * revisiones ^</pattern> <!-- Cómo puedo justificar mi asistencia a las revisiones -->
+<pattern>* justificar ^</pattern> <!-- Cómo puedo justificar mi asistencia a las actividades de evaluación  -->
 <template><srai>ASISTENCIA</srai></template>
 </category>
 
@@ -570,31 +565,7 @@ También cabe mencionar la conserjería, la administración y la delegación de 
 
 <!-- Regla 18v2 -->
 <category>
-<pattern>* deportivas ^</pattern> <!-- Qué actividades deportivas ofrece la ESEI -->
-<template><srai>DEPORTES</srai></template>
-</category>
-
-<!-- Regla 18v3 -->
-<category>
-<pattern>* deportiva ^</pattern> <!-- Qué actividad deportiva ofrece la ESEI -->
-<template><srai>DEPORTES</srai></template>
-</category>
-
-<!-- Regla 18v4 -->
-<category>
-<pattern>* deportivo ^</pattern> <!-- hay algun club deportivo en la ESEI -->
-<template><srai>DEPORTES</srai></template>
-</category>
-
-<!-- Regla 18v5 -->
-<category>
-<pattern>* deportivos ^</pattern> <!-- hay clubs deportivos en la ESEI -->
-<template><srai>DEPORTES</srai></template>
-</category>
-
-<!-- Regla 18v6 -->
-<category>
-<pattern>* deporte ^</pattern> <!-- donde puedo hacer deporte en la esei -->
+<pattern>* <set>deportivo</set> ^</pattern> <!-- Qué actividades deportivas ofrece la ESEI -->
 <template><srai>DEPORTES</srai></template>
 </category>
 
