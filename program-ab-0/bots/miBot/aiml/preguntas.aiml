@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: preguntas.aiml -->
+<!-- Author: Brais Fontan, Yomar Costa, David Santiago Colmenares -->
+<!-- Last modified: 04/03/2020 -->
+
+<!-- Pregunta 1 -->
+<category>
+<pattern>Hablame sobre la Uvigo</pattern>
+<template>
+<random>
+	<li>En los campus de la Uvigo puedes estudiar mas de 100 grados y masters oficiales y mas de 30 programas de doctorado.</li>
+	<li>La Universidad de Vigo tiene lugares muy bonitos y tranquilos como la zona del Cuvi.</li>
+	<li>La Universidad de Vigo tiene 3 campus: Ourense, Vigo y Pontevedra.</li>
+	<li>La Universidad de Vigo se conoce por Uvigo o Universidad de Vigo</li>
+	<li>La Uvigo cuenta con El Campus de Excelencia Internacional, llamado Campus do Mar.</li>
+</random>
+</template>
+</category>
+
+<!-- Pregunta 1v2 -->
+<category>
+<pattern>Que es la <set>sinonimosuvigo</set></pattern>  <!-- que es la universidad de vigo-->
+<template>
+<srai>Hablame sobre la Uvigo</srai>
+</template>
+</category>
+
+<!-- Pregunta 1v3 -->
+<category>
+<pattern><set>sinonimoshablar</set> * <set>sinonimosuvigo</set></pattern> <!-- hablame/informame de (lo que sepas de) la Uvigo-->
+<template>
+<srai>Hablame sobre la Uvigo</srai>
+</template>
+</category>
+
+<!-- Pregunta 1v4 -->
+<category>
+<pattern>* Sobre la <set>sinonimosuvigo</set></pattern> <!--dime algo sobre la uvigo-->
+<template>
+<srai>Hablame sobre la Uvigo</srai>
+</template>
+</category>
+
+<!-- Pregunta 1v5 -->
+<category>
+<pattern>* acerca de la <set>sinonimosuvigo</set></pattern> <!--dime algo acerca de la uvigo-->
+<template>
+<srai>Hablame sobre la Uvigo</srai>
+</template>
+</category>
+
+<!-- Pregunta 1v6 -->
+<category>
+<pattern>^ sabes * <set>sinonimosuvigo</set></pattern> <!--que sabes de la Uvigo? / sabes algo de la uvigo?-->
+<template>
+<srai>Hablame sobre la Uvigo</srai>
+</template>
+</category>
+
+
+<!-- Pregunta 1v7 -->
+<category>
+<pattern>^ informacion ^ <set>sinonimosuvigo</set></pattern> <!--me puedes dar informacion acerca de la uvigo // Informacion uvigo-->
+<template>
+<srai>Hablame sobre la Uvigo</srai>
+</template>
+</category>
+
+<!-- Pregunta 2 -->
+
+<category>
+<pattern>Ubicacion ESEI</pattern>
+<template>
+La ESEI se encuentra en el campus de Ourense, concretamente en Campus As Lagoas, situado cerca de la Escuela Oficial de Idiomas de Ourense.
+</template>
+</category>
+
+
+<!-- Pregunta 2v2 -->
+
+<category>
+<pattern>Donde esta la <set>sinonimosesei</set></pattern> <!--Donde esta la esei-->
+<template>
+<srai>Ubicacion ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 2v4 -->
+
+<category>
+<pattern>donde se encuentra la <set>sinonimosesei</set></pattern> <!--Donde se encuentra la esei-->
+<template>
+<srai>Ubicacion ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 2v5 -->
+
+<category>
+<pattern>donde se halla la <set>sinonimosesei</set></pattern> <!--Donde se halla la esei-->
+<template>
+<srai>Ubicacion ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 2v6 -->
+
+<category>
+<pattern>* ubicacion de la <set>sinonimosesei</set></pattern> <!--cual es la ubicacion de la esei-->
+<template>
+<srai>Ubicacion ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 2v7 -->
+
+<category>
+<pattern>^ donde ^ encontrar la <set>sinonimosesei</set></pattern><!--sabes Donde puedo encontrar la esei-->
+<template>
+<srai>Ubicacion ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 2v8 -->
+
+<category>
+<pattern>en que lugar * la <set>sinonimosesei</set></pattern><!--en que lugar esta/se halla la esei-->
+<template>
+<srai>Ubicacion ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 2v9 -->
+
+<category>
+<pattern>como puedo <set>sinonimosir</set> * <set>sinonimosesei</set></pattern> <!--como puedo ir/hallar/encontrar la esei-->
+<template>
+<srai>Ubicacion ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 3 -->
+
+<category>
+<pattern>Estudios ESEI</pattern>
+<template>
+En la ESEI se puede estudiar: Grado en Ingenieria Informatica, doble grado ADE + II, Master Universitario en II, suplemento europeo al titulo y estudios de doctoramiento.
+</template>
+</category>
+
+<!-- Pregunta 3v2 -->
+
+<category>
+<pattern>* puedo estudiar en la <set>sinonimosesei</set></pattern> <!-- que puedo estudiar en la esei -->
+<template>
+<srai>Estudios ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 3v3 -->
+
+<category>
+<pattern>* pueden estudiar en la <set>sinonimosesei</set></pattern> <!-- que cosas se pueden estudiar en la esei -->
+<template>
+<srai>Estudios ESEI</srai>
+</template>
+</category>
+
+
+<!-- Pregunta 3v4 -->
+
+<category>
+<pattern>* cursar en la <set>sinonimosesei</set></pattern> <!-- que puedo cursar en la esei -->
+<template>
+<srai>Estudios ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 3v5 -->
+
+<category>
+<pattern>* <set>sinonimosoferta</set> de estudios * la <set>sinonimosesei</set></pattern> <!-- ¿que oferta/opciones de estudios hay en la esei? -->
+<template>
+<srai>Estudios ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 3v5 -->
+
+<category>
+<pattern>que <set>sinonimosoferta</set> formativa * la <set>sinonimosesei</set></pattern> <!-- ¿que oferta/opciones formativa tiene la esei? -->
+<template>
+<srai>Estudios ESEI</srai>
+</template>
+</category>
+
+
+<!-- Pregunta 4 -->
+
+<category>
+<pattern>pena ESEI</pattern>
+<template>
+<random>
+	<li>Contamos con una amplia oferta formativa y laboral.</li>
+	<li>Contamos con una delegacion de alumnos muy activa y fomentamos mucho el trabajo en equipo</li>
+	<li>En la ESEI tienes un horario de clases bastante reducido en comparacion con otras ingenierias.</li>
+	<li>Estudiar en la ESEI te da acceso a ventajas como reservar seminarios. </li>
+	<li>La ESEI cuenta con gran cantidad de profesores expertos en sus materias.</li>
+</random>
+
+</template>
+</category>
+
+<!-- Pregunta 4v1 -->
+
+<category>
+<pattern>Por que * la pena * en la <set>sinonimosesei</set></pattern> <!-- porque vale la pena estudiar en la esei -->
+<template>
+<srai>pena ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 4v2 -->
+
+<category>
+<pattern>* motivos para estudiar en la <set>sinonimosesei</set></pattern> <!-- dime motivos para estudiar en la esei -->
+<template>
+<srai>pena ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 4v3 -->
+
+<category>
+<pattern>Por que deberia * en la <set>sinonimosesei</set></pattern> <!--por que deberia estudiar en la esei -->
+<template>
+<srai>pena ESEI</srai>
+</template>
+</category>
+
+
+<!-- Pregunta 5 -->
+
+<category>
+<pattern>cafeteria ESEI</pattern>
+<template>
+Si, con unos precios muy economicos y un ambiente muy agradable.
+</template>
+</category>
+
+
+<!-- Pregunta 5v2 -->
+
+<category>
+<pattern>* <set>sinonimoscafeteria</set> en la <set>sinonimosesei</set></pattern> <!-- ¿Hay bar/cafeteria en la esei? -->
+<template>
+<srai>cafeteria ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 5v3 -->
+
+<category>
+<pattern>^ La <set>sinonimosesei</set> * <set>sinonimoscafeteria</set></pattern> <!-- En la esei hay cafeteria? // La esei tiene cafeteria? -->
+<template>
+<srai>cafeteria ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 6 -->
+
+<category>
+<pattern>secretaria ESEI</pattern>
+<template>
+La secretaria esta en el edificio politecnico, a la derecha entrando a la planta 0 por la entrada principal.
+</template>
+</category>
+
+
+<!-- Pregunta 6v2 -->
+
+<category>
+<pattern>^ donde * la secretaria de la <set>sinonimosesei</set></pattern> <!-- dime/sabes donde se encuentra la secretaria de la esei-->
+<template>
+<srai>secretaria ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 6v3 -->
+
+<category>
+<pattern>* ubicacion de la secretaria de la <set>sinonimosesei</set></pattern> <!-- cual es la ubicacion de la secretaria de la esei-->
+<template>
+<srai>secretaria ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 6v4 -->
+
+<category>
+<pattern>* esta la secretaria la <set>sinonimosesei</set></pattern> <!-- en que lugar esta la secretaria de la esei-->
+<template>
+<srai>secretaria ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 6v5 -->
+
+<category>
+<pattern>* puedo <set>sinonimosir</set> ^ la secretaria de la <set>sinonimosesei</set></pattern> <!-- como/donde puedo encontrar/ir (a) la secretaria de la esei-->
+<template>
+<srai>secretaria ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 6v6 -->
+
+<category>
+<pattern>* encuentro la secretaria de la <set>sinonimosesei</set></pattern> <!-- donde/como encuentro la secretaria de la esei-->
+<template>
+<srai>secretaria ESEI</srai>
+</template>
+</category>
+
+
+<!-- Pregunta 7 -->
+
+<!-- Regla 7v1 -->
+<category>
+<pattern>HORARIOSECRETARIA</pattern>
+<template>La secretaria de la ESEI atiende al publico de lunes a viernes entre las 09:00 y 14:00 h. </template>
+</category>
+
+
+<!-- Regla 7v2 -->
+<category>
+<pattern>* horario de atencion al publico *</pattern> <!-- Que horario de atencion al publico tiene la secretaria del centro -->
+<template><srai>HORARIOSECRETARIA</srai></template>
+</category>
+
+<!-- Regla 7v3 -->
+<category>
+<pattern>* horario * atencion al publico</pattern> <!-- Cual es el horario que tiene la secretaria del centro de atencion al publico  -->
+<template><srai>HORARIOSECRETARIA</srai></template>
+</category>
+
+
+<!-- Pregunta 8 -->
+
+<!-- Regla 8v1 -->
+<category>
+<pattern>PAT</pattern>
+<template>El Plan de Accion Titorial (PAT) de la ESEI es un programa de atencion personalizada dirigida al alumno de nuevo ingreso que vela por la integracion de estos en la vida universitaria.</template>
+</category>
+
+<!-- Regla 8v2 -->
+<category>
+<pattern>^ <set>sinonimospat</set> ^</pattern> <!-- Que es el PAT -->
+<template><srai>PAT</srai></template>
+</category>
+
+
+<!-- Pregunta 9 -->
+
+<!-- Regla 9v1 -->
+<category>
+<pattern>NECESIDADESESPECIALES</pattern>
+<template>Un alumno que tenga necesidades educativas especiales tiene derecho al siguiente protocolo de acogida:
+Primero se comunica al centro el nombre el alumno para dar a conocerlo entre la Dirección del Centro y el profesorado. Despues, el alumno debera presentarse ante todos los profesores que le vayan a impartir clases. Por ultimo, se informara al profesorado de un programa de atencion personalizado en caso de ser necesario.</template>
+</category>
+
+<!-- Regla 9v2 -->
+<category>
+<pattern>* protocolo de acogida * <set>necesidadesespeciales</set></pattern> <!-- Existe algun protocolo de acogida para los alumnos que tengan necesidades educativas especiales -->
+<template><srai>NECESIDADESESPECIALES</srai></template>
+</category>
+
+<!-- Regla 9v3 -->
+<category>
+<pattern>* <set>necesidadesespeciales</set> * protocolo de acogida</pattern> <!-- Los alumnos con necesidades educativas especiales tienen algun tipo de protocolo de acogida -->
+<template><srai>NECESIDADESESPECIALES</srai></template>
+</category>
+
+<!-- Pregunta 10 -->
+
+<!-- Regla 10v1 -->
+<category>
+<pattern>DELEGACIONALUMNOS</pattern>
+<template>Sí, la ESEIDA. Cada dos años los estudiantes eligen a sus representantes de la ESEI y de la UVigo. Puedes contactar con la Delegación mediante el correo eseida@esei.uvigo.es .</template>
+</category>
+
+<!-- Regla 10v2 -->
+<category>
+<pattern>* delegacion de alumnos * <set>sinonimosesei</set></pattern> <!-- Hay alguna delegacion de alumnos en la ESEI -->
+<template><srai>DELEGACIONALUMNOS</srai></template>
+</category>
+
+<!-- Regla 10v3 -->
+<category>
+<pattern>* <set>sinonimosesei</set> * delegacion de alumnos</pattern> <!-- En la ESEI existe alguna delegacion de alumnos -->
+<template><srai>DELEGACIONALUMNOS</srai></template>
+</category>
+
+<!-- Pregunta 11 -->
+
+<!-- Regla 11v1 -->
+<category>
+<pattern>SUPLEMENTOEUROPEO</pattern>
+<template>El Suplemento Europeo al Titulo es un documento que contiene información sobre los estudios que cursaste, los resultados que obtuviste en las asignaturas y las capacidades profesionales y personales que adquiriste en tu formacion.</template>
+</category>
+
+<!-- Regla 11v2 -->
+<category>
+<pattern>* suplemento europeo al titulo</pattern> <!-- Podrias decirme que es el suplemento europeo al titulo -->
+<template><srai>SUPLEMENTOEUROPEO</srai></template>
+</category>
+
+<!-- Regla 11v2 -->
+<category>
+<pattern>el suplemento europeo al titulo *</pattern> <!-- El suplemento europeo al titulo, que es -->
+<template><srai>SUPLEMENTOEUROPEO</srai></template>
+</category>
+
+
+<!-- Pregunta 12 -->
+
+<!-- Regla 12v1 -->
+<category>
+<pattern>PRACTICASESEI</pattern>
+<template>Ya seas un alumno de Grado o Master, puedes realizar tanto practicas curriculares (durante el curso) como extracurriculares (en vacaciones) en empresas para poder complementar tus estudios y asi terminar la carrera con una pequeña formacion laboral.</template>
+</category>
+
+<!-- Regla 12v2 -->
+<category>
+<pattern>* practicas *</pattern> <!-- Dónde puedo consultar la oferta de prácticas en empresas -->
+<template><srai>PRACTICASESEI</srai></template>
+</category>
+
+
+<!-- Pregunta 13 -->
+
+<!-- Regla 13v1 -->
+<category>
+<pattern>DONDE PRACTICAS</pattern> 
+<template>La ESEI publica al principio del cuatrimestre las ofertas de practicas para el mismo en el siguiente enlace: https://esei.uvigo.es/docencia/practicas-en-empresa
+Por otro lado si quieres realizar prácticas extracurriculares puedes negociar tu mismo con la empresa las condiciones de las prácticas y que luego esta firme un convenio con la universidad para que te convaliden las horas.
+</template>
+</category>
+
+
+<!-- Regla 13v2 -->
+<category>
+<pattern>* oferta de practicas ^</pattern> <!-- Donde puedo consultar la oferta de practicas en empresas -->
+<template><srai>DONDE PRACTICAS</srai></template>
+</category>
+
+
+<!-- Pregunta 14 -->
+<!-- Regla 14v1 -->
+<category>
+<pattern>RECURSOS</pattern>
+<template>La ESEI tiene dedicado a la enseñanza una serie de 6 aulas dedicadas a las clases de teoría y 14 aulas dedicadas a las clases prácticas. También existen dos salones tipo auditorio, dedicados para charlas, eventos y exámenes. 
+Pero es de especial interés para el alumnado los recursos dedicados al estudio, como una sala de estudio localizada en la planta baja, una sala de libre acceso localizada en el sótano y una serie de seminarios a la disposición del alumnado para estudiar y realizar trabajos en grupo. 
+También cabe mencionar la conserjería, la administración y la delegación de alumnos son lugares a los que puedes ir a preguntar si tienes alguna duda acerca de la ESEI, además de a mi.
+</template>
+</category>
+
+<!-- Regla 14v2 -->
+<category>
+<pattern>* recursos * <set>sinonimosesei</set></pattern> <!-- Con qué recursos materiales cuenta la ESEI -->
+<template><srai>RECURSOS</srai></template>
+</category>
+
+<!-- Regla 14v3 -->
+<category>
+<pattern>* <set>sinonimosesei</set> * recursos ^</pattern> <!-- la esei cuenta con recursos materiales -->
+<template><srai>RECURSOS</srai></template>
+</category>
+
+<!-- Regla 14v4 -->
+<category>
+<pattern>* servicios * <set>sinonimosesei</set></pattern> <!-- Con qué servicios cuenta la ESEI -->
+<template><srai>RECURSOS</srai></template>
+</category>
+
+<!-- Regla 14v5 -->
+<category>
+<pattern>* <set>sinonimosesei</set>* servicios ^</pattern> <!-- la esei cuenta con servicios -->
+<template><srai>RECURSOS</srai></template>
+</category>
+
+
+<!-- Pregunta 15 -->
+<!-- Regla 15v1 -->
+<category>
+<pattern>TFG</pattern>
+<template>
+	Es necesario realizar un trabajo al finalizar tanto la carrera como el máster. El trabajo ha de ser tutelado por algún profesor del centro. La asignación de trabajos puede ser directa, por acuerdo propio entre estudiante y profesor; o por peticion, seleccionadas por el alumnado a partir de las propuestas ofrecidas por el profesorado.
+</template>
+</category>
+
+<!-- Regla 15v2 -->
+<category>
+<pattern>* <set>sinonimostfg</set>^</pattern> <!-- Qué son los Trabajos Fin de Grado o de Máster -->
+<template><srai>TFG</srai></template>
+</category>
+
+
+<!-- Pregunta 16 -->
+<!-- Regla 16v1 -->
+<category>
+<pattern>BIBLIOTECA</pattern>
+<template>
+	La sede de la biblioteca de la uvigo de Ourense se encuentra en la entrada del campus norte, a lado de la piscina.
+	Puedes consultar el catálogo de la biblioteca para ver la disponibilidad de el recurso en el que estés interesado, y si no esta disponible en la sede de Ourense se puede solicitar a otra de las bibliotecas de la Uvigo.
+	Puedes ver el catalogo aqui: http://www.perseo.biblioteca.uvigo.es
+</template>
+</category>
+
+
+<!-- Regla 16v2 -->
+<category>
+<pattern>* biblioteca ^</pattern> <!-- Cómo hago para acceder a la Biblioteca -->
+<template><srai>BIBLIOTECA</srai></template>
+</category>
+
+
+<!-- Pregunta 17 -->
+<!-- Regla 17v1 -->
+<category>
+<pattern>ASISTENCIA</pattern>
+<template>
+	Los profesores realizan control de asistencia en los exámenes y revisiones haciendo un registro donde hay que firmar conforme asististe. En algunos de estos casos es necesario también enseñar el DNI o algún tipo de indentificador para evitar el fraude de identidad.
+</template>
+</category>
+
+<!-- Regla 17v2 -->
+<category>
+<pattern>* asistencia * evaluacion ^</pattern> <!-- Cómo puedo justificar mi asistencia a las actividades de evaluación  -->
+<template><srai>ASISTENCIA</srai></template>
+</category>
+
+<!-- Regla 17v3 -->
+<category>
+<pattern>* asistencia * evaluaciones ^</pattern> <!-- Cómo puedo justificar mi asistencia a las actividades de evaluación  -->
+<template><srai>ASISTENCIA</srai></template>
+</category>
+
+<!-- Regla 17v4 -->
+<category>
+<pattern>* asistencia * revision ^</pattern> <!-- Cómo puedo justificar mi asistencia a las revisiones -->
+<template><srai>ASISTENCIA</srai></template>
+</category>
+
+<!-- Regla 17v5 -->
+<category>
+<pattern>* asistencia * revisiones ^</pattern> <!-- Cómo puedo justificar mi asistencia a las revisiones -->
+<template><srai>ASISTENCIA</srai></template>
+</category>
+
+<!-- Pregunta 18 -->
+<!-- Regla 18v1 -->
+<category>
+<pattern>DEPORTES</pattern>
+<template>
+	En la universidad existen muchas opciones para hacer ejercicio, pero si no eres profesional en ningún deporte yo te recomiendo que empieces por una de las clases de inciación en estos. Hay clases muy distintas, por ejemplo bádminton, escalada, tenis, rugby, natación o ajedrez. Aqui puedes ver todas las opciones disponibles a ver si encuentras una que te guste: "https://campusactivo.uvigo.gal/campusactivo/publica/actividad/lista.xhtml"
+</template>
+</category>
+
+<!-- Regla 18v2 -->
+<category>
+<pattern>* deportivas ^</pattern> <!-- Qué actividades deportivas ofrece la ESEI -->
+<template><srai>DEPORTES</srai></template>
+</category>
+
+<!-- Regla 18v3 -->
+<category>
+<pattern>* deportiva ^</pattern> <!-- Qué actividad deportiva ofrece la ESEI -->
+<template><srai>DEPORTES</srai></template>
+</category>
+
+<!-- Regla 18v4 -->
+<category>
+<pattern>* deportivo ^</pattern> <!-- hay algun club deportivo en la ESEI -->
+<template><srai>DEPORTES</srai></template>
+</category>
+
+<!-- Regla 18v5 -->
+<category>
+<pattern>* deportivos ^</pattern> <!-- hay clubs deportivos en la ESEI -->
+<template><srai>DEPORTES</srai></template>
+</category>
+
+<!-- Regla 18v6 -->
+<category>
+<pattern>* deporte ^</pattern> <!-- donde puedo hacer deporte en la esei -->
+<template><srai>DEPORTES</srai></template>
+</category>
+
+</aiml>
+

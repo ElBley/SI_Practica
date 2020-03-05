@@ -1,8 +1,8 @@
-rojo
-amarillo
-verde
-azul
-violeta
-naranja
-negro
-blanco
+Rojo
+Verde
+Azul
+Amarillo
+Violeta
+Blanco
+Negro
+Gris
