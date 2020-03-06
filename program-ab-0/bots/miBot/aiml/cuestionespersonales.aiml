@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: cuestionespersonales.aiml -->
+<!-- Author: Brais Fontan, Yomar Costa, David Santiago Colmenares -->
+<!-- Last modified: 06/03/2020 -->
+
+
+<!-- Pregunta extra 1 -->
+
+
+
+<category>
+<pattern>NOMBRE</pattern>
+<template>
+Me llamo Yomar
+</template>
+</category>
+
+<!-- Pregunta extra 1v2 -->
+<category>
+<pattern>* llamas ^</pattern>  <!-- y como te llamas tu-->
+<template>
+<srai>NOMBRE</srai>
+</template>
+</category>
+
+
+<!-- Pregunta extra 1v3 -->
+<category>
+<pattern>* nombre ^</pattern>  <!-- y cual es tu nombre-->
+<template>
+<srai>NOMBRE</srai>
+</template>
+</category>
+
+<!-- Pregunta extra 2 -->
+
+<category>
+<pattern>EDAD</pattern>
+<template>
+Tengo 21 años.
+</template>
+</category>
+
+<!-- Pregunta extra 2v2 -->
+<category>
+<pattern>* edad ^</pattern>  <!-- y que edad tu-->
+<template>
+<srai>EDAD</srai>
+</template>
+</category>
+
+
+<!-- Pregunta extra 2v3 -->
+<category>
+<pattern>* años tienes ^</pattern>  <!-- cuantos años tienes-->
+<template>
+<srai>EDAD</srai>
+</template>
+</category>
+
+<!-- Pregunta extra 2v4 -->
+<category>
+<pattern>* fecha de nacimiento ^</pattern>  <!-- cual es tu fecha de nacimiento-->
+<template>
+<srai>EDAD</srai>
+</template>
+</category>
+
+
+
+<!-- Pregunta extra 3 -->
+
+<category>
+<pattern>NUMEROASIGNATURAS</pattern>
+<template>
+Tengo 10 asignaturas este curso, por ahora he aprobado todo a la primera y siempre me matriculo de 10.
+</template>
+</category>
+
+<!-- Pregunta extra 3v2 -->
+<category>
+<pattern>^ cuantas asignaturas *</pattern>  <!--y cuantas asignaturas tienes-->
+<template>
+<srai>NUMEROASIGNATURAS</srai>
+</template>
+</category>
+
+
+<!-- Pregunta extra 4 -->
+
+<category>
+<pattern>GUSTANASIGNATURAS</pattern>
+<template>
+Redes y bases de datos.
+</template>
+</category>
+
+<!-- Pregunta extra 4v2 -->
+<category>
+<pattern> * asignaturas * favoritas</pattern>  <!--cuales son tus asignaturas fav-->
+<template>
+<srai>GUSTANASIGNATURAS</srai>
+</template>
+</category>
+
+
+<!-- Pregunta extra 4v3 -->
+<category>
+<pattern> * asignaturas * gustan</pattern>  <!--cuales las asignaturas que mas te gustan-->
+<template>
+<srai>GUSTANASIGNATURAS</srai>
+</template>
+</category>
+
+<!-- Pregunta extra 5 -->
+
+<category>
+<pattern>TUTFG</pattern>
+<template>
+Algo relacionado con redes o bases de datos.
+</template>
+</category>
+
+<!-- Pregunta extra 4v2 -->
+<category>
+<pattern>* tematica ^ <set>sinonimostfg</set> *</pattern>  <!--que tematica te gustaria para tu TFG-->
+<template>
+<srai>TUTFG</srai>
+</template>
+</category>
+
+
+<!-- Pregunta extra 4v3 -->
+<category>
+<pattern>* <set>sinonimostfg</set> * tematica ^ </pattern>  <!--en tu tfg que tematicas vas a elegir-->
+<template>
+<srai>TUTFG</srai>
+</template>
+</category>
+
+
+<!-- Pregunta extra 7 -->
+
+<category>
+<pattern>DONDEVIVES</pattern>
+<template>
+Vivo en la zona del Puente de Ourense.
+</template>
+</category>
+
+<!-- Pregunta extra 7v2 -->
+<category>
+<pattern> donde ^ <set>sinonimosvivir</set> *</pattern>  <!--donde vives-->
+<template>
+<srai>TUTFG</srai>
+</template>
+</category>
+
+
+<!-- Pregunta extra 7v4 -->
+<category>
+<pattern>* residencia * </pattern>  <!--cual es tu residencia actual-->
+<template>
+En ourense hay varias residencias por ejemplo, la resa, pero yo no vivo en ninguna.
+</template>
+</category>
+
+
+<!-- Pregunta extra 15 -->
+<!-- Regla 15v1 -->
+<category>
+<pattern>* dificil * <set>sinonimoscarrera</set> ^</pattern> 	<!-- Es dificil la carrera -->
+<template>La carrera es mucho trabajo, pero si llevas las asignaturas al dia no tendras problema</template>
+</category>
+
+<!-- Regla extra 15v2 -->
+<category>
+<pattern>^ <set>sinonimoscarrera</set> * dificil ^</pattern> 	<!-- La carrera es muy dificil -->
+<template>La carrera es mucho trabajo, pero si llevas las asignaturas al dia no tendras problema</template>
+</category>
+
+<!-- Pregunta extra 16 -->
+<!-- Regla 16v1 -->
+<category>
+<pattern>* repetidores ^</pattern> 	<!-- Hay muchos repetidores -->
+<template> Dependiendo de la asignatura vas a ver más gente repitiendo, lo puedes usar de orientacion para estimar como de dificil va a ser, pero yo por ahora tengo todo aprobado</template>
+</category>
+
+<!-- Regla 16v2 -->
+<category>
+<pattern>* repetiendo ^</pattern> 	<!-- Hay mucha gente repitiendo -->
+<template> Dependiendo de la asignatura vas a ver más gente repitiendo, lo puedes usar de orientacion para estimar como de dificil va a ser, pero yo por ahora tengo todo aprobado</template>
+</category>
+
+<!-- Regla 16v3 -->
+<category>
+<pattern>* repetido ^</pattern> 	<!-- Has repetido alguna asignatura -->
+<template> Dependiendo de la asignatura vas a ver más gente repitiendo, lo puedes usar de orientacion para estimar como de dificil va a ser, pero yo por ahora tengo todo aprobado</template>
+</category>
+
+<!-- Pregunta extra 17 -->
+<!-- Regla 17v1 -->
+<category>
+<pattern>* <set>sinonimosvas</set> * <set>sinonimosesei</set> </pattern> 	<!-- como vas a la esei -->
+<template>Yo vivo cerca, asi que tardo como unos 10 minutos viniendo a pie</template>
+</category>
+
+<!-- Pregunta extra 18 -->
+<!-- Regla 18v1 -->
+<category>
+<pattern>^ <set>sinonimospretender</set> * practicas ^</pattern> 	<!-- tienes pensado hacer practicas en empresas -->
+<template>Se aprende un monton haciendo practicas en empresas, pero yo aun no he decidido si hacerlas porque hay asignaturas en cuarto muy interesantes</template>
+</category>
+
+<!-- Regla 18v2 -->
+<category>
+<pattern>^ tu * practicas ^</pattern> 	<!-- tu vas a realizar practicas? -->
+<template>Se aprende un monton haciendo practicas en empresas, pero yo aun no he decidido si hacerlas porque hay asignaturas en cuarto muy interesantes</template>
+</category>
+
+<!-- Pregunta extra 19 -->
+<!-- Regla 19v1 -->
+<category>
+<pattern>^ profesor * <set>sinonimostfg</set> ^</pattern> 	<!-- a que profesor querrias para el tfg -->
+<template> Aun estoy pensando el tema que quiero tratar, en funcion de eso eligire a un profesor que sepa sobre ello</template>
+</category>
+
+<!-- Regla 19v2 -->
+<category>
+<pattern>^ tutor * <set>sinonimostfg</set> ^</pattern> 	<!-- a que tutor querrias para el tfg -->
+<template> Aun estoy pensando el tema que quiero tratar, en funcion de eso eligire a un profesor que sepa sobre ello </template>
+</category>
+
+<!-- Regla 19v3 -->
+<category>
+<pattern>^ <set>sinonimostfg</set> * tutor ^</pattern> 	<!-- para el tfg a quien quieres de tutor -->
+<template> Aun estoy pensando el tema que quiero tratar, en funcion de eso eligire a un profesor que sepa sobre ello </template>
+</category>
+
+<!-- Regla 19v4 -->
+<category>
+<pattern>^ <set>sinonimostfg</set> * profesor ^</pattern> 	<!-- para el tfg a que profesor vas a elegir -->
+<template> Aun estoy pensando el tema que quiero tratar, en funcion de eso eligire a un profesor que sepa sobre ello </template>
+</category>
+
+<!-- Pregunta extra 20 -->
+<!-- Regla 20v1 -->
+<category>
+<pattern>^ <set>sinonimosordenador</set> ^</pattern> 	<!-- se puede llevar ordenador a clase -->
+<template> En las clases teoricas hay profesores que no les gusta que lleves ningun tipo de ordenador. Aunque en las practicas es recomendable para muchas asignaturas. Pero si no tienes no es necesario, un papel y un boli es mas que suficiente. </template>
+</category>
+
+
+
+</aiml>
+

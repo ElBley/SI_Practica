@@ -245,7 +245,7 @@ En la ESEI se puede estudiar: Grado en Ingenieria Informatica, doble grado ADE +
 <category>
 <pattern>cafeteria ESEI</pattern>
 <template>
-Si, con unos precios muy economicos y un ambiente muy agradable.
+Hay una cafeteria en la planata 0 de la ESEI con unos precios muy economicos y un ambiente muy agradable.
 </template>
 </category>
 
@@ -263,6 +263,15 @@ Si, con unos precios muy economicos y un ambiente muy agradable.
 
 <category>
 <pattern>^ La <set>sinonimosesei</set> * <set>sinonimoscafeteria</set></pattern> <!-- En la esei hay cafeteria? // La esei tiene cafeteria? -->
+<template>
+<srai>cafeteria ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 5v4 -->
+
+<category>
+<pattern>Donde * <set>sinonimoscomer</set> * <set>sinonimosesei</set></pattern> <!-- donde puedo almorzar en la esei -->
 <template>
 <srai>cafeteria ESEI</srai>
 </template>
@@ -503,6 +512,11 @@ Tambien cabe mencionar la conserjeria, la administracion y la delegacion de alum
 <template><srai>RECURSOS</srai></template>
 </category>
 
+<!-- Regla 14v4 -->
+<category>
+<pattern>Donde * <set>sinonimosestudiar</set> ^</pattern> <!-- Donde puedo hacer trabajos con mis compañeros -->
+<template><srai>RECURSOS</srai></template>
+</category>
 
 <!-- Pregunta 15 -->
 <!-- Regla 15v1 -->
