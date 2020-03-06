@@ -53,7 +53,7 @@ Tengo 21 años.
 
 <!-- Pregunta extra 2v3 -->
 <category>
-<pattern>* años tienes ^</pattern>  <!-- cuantos años tienes-->
+<pattern>* anhos tienes ^</pattern>  <!-- cuantos años tienes-->
 <template>
 <srai>EDAD</srai>
 </template>
@@ -124,7 +124,7 @@ Algo relacionado con redes o bases de datos.
 
 <!-- Pregunta extra 4v2 -->
 <category>
-<pattern>* tematica ^ <set>sinonimostfg</set> *</pattern>  <!--que tematica te gustaria para tu TFG-->
+<pattern>* tematica ^ <set>sinonimostfg</set> ^</pattern>  <!--que tematica te gustaria para tu TFG-->
 <template>
 <srai>TUTFG</srai>
 </template>
@@ -134,6 +134,24 @@ Algo relacionado con redes o bases de datos.
 <!-- Pregunta extra 4v3 -->
 <category>
 <pattern>* <set>sinonimostfg</set> * tematica ^ </pattern>  <!--en tu tfg que tematicas vas a elegir-->
+<template>
+<srai>TUTFG</srai>
+</template>
+</category>
+
+
+<!-- Pregunta extra 4v4 -->
+<category>
+<pattern>* tema ^ <set>sinonimostfg</set> ^</pattern>  <!--que tema te gustaria para tu TFG-->
+<template>
+<srai>TUTFG</srai>
+</template>
+</category>
+
+
+<!-- Pregunta extra 4v5 -->
+<category>
+<pattern>* <set>sinonimostfg</set> * tema ^ </pattern>  <!--en tu tfg que tema vas a elegir-->
 <template>
 <srai>TUTFG</srai>
 </template>
@@ -165,6 +183,130 @@ Vivo en la zona del Puente de Ourense.
 En ourense hay varias residencias por ejemplo, la resa, pero yo no vivo en ninguna.
 </template>
 </category>
+
+
+<!-- Pregunta-8 Alumno -->
+<!-- Regla 8v1 Alumno -->
+<category>
+<pattern>PEORPROFESOR</pattern>
+<template>Creo que no deberia responderte a esa pregunta aqui, podrian estar escuchandonos... </template>
+</category>
+
+<!-- Regla 8v2 Alumno -->
+<category>
+<pattern>* <set>sinonimosprofesor</set> * peor ^</pattern> <!-- Como se llama el profesor que peor te cae -->
+<template><srai>PEORPROFESOR</srai></template>
+</category>
+
+<!-- Regla 8v3 Alumno -->
+<category>
+<pattern>* <set>sinonimosprofesor</set> * <set>sinonimosmal</set> ^</pattern> <!-- Hay algun profesor que te caiga mal en la escuela-->
+<template><srai>PEORPROFESOR</srai></template>
+</category>
+
+<!-- Regla 8v4 Alumno -->
+<category>
+<pattern>* <set>sinonimosmal</set> * <set>sinonimosprofesor</set> ^</pattern> <!-- Te cae mal algun profesor de la escuela-->
+<template><srai>PEORPROFESOR</srai></template>
+</category>
+
+
+<!-- Pregunta-9 Alumno -->
+<!-- Regla 9v1 Alumno -->
+<category>
+<pattern>MEJORPROFESOR</pattern>
+<template>Son muchos los que me caen bien, pero si me tengo que decantar por uno diria que es "Coff coff". Perdon, esta tos coronovirica me esta matando...</template>
+</category>
+
+<!-- Regla 9v2 Alumno -->
+<category>
+<pattern>* <set>sinonimosprofesor</set> * mejor ^</pattern> <!-- Como se llama el profesor que mejor te cae -->
+<template><srai>MEJORPROFESOR</srai></template>
+</category>
+
+<!-- Regla 9v3 Alumno -->
+<category>
+<pattern>* <set>sinonimosprofesor</set> * <set>sinonimosbien</set> ^</pattern> <!-- Hay algun profesor que te caiga bien en la ESEI-->
+<template><srai>MEJORPROFESOR</srai></template>
+</category>
+
+<!-- Regla 9v4 Alumno -->
+<category>
+<pattern>* <set>sinonimosbien</set> * <set>sinonimosprofesor</set> ^</pattern> <!-- Te cae bien algun profesor de la escuela-->
+<template><srai>MEJORPROFESOR</srai></template>
+</category>
+
+<!-- Pregunta-10 Alumno -->
+<!-- Regla 10v1 Alumno -->
+<category>
+<pattern>DIRECTORESCUELA</pattern>
+<template>Creo que se llama Fran o algo parecido, pero tampoco estoy muy seguro...</template>
+</category>
+
+<!-- Regla 10v2 Alumno -->
+<category>
+<pattern>* director *</pattern> <!-- Sabes como se llama el director de la escuela -->
+<template><srai>DIRECTORESCUELA</srai></template>
+</category>
+
+<!-- Regla 10v3 Alumno -->
+<category>
+<pattern>* <set>sinonimosdirigir</set> *</pattern> <!-- Sabes como se llama quien dirige la escuela -->
+<template><srai>DIRECTORESCUELA</srai></template>
+</category>
+
+<!-- Pregunta-11 Alumno -->
+<!-- Regla 11v1 Alumno -->
+<category>
+<pattern>TIEMPOLIBRE</pattern>
+<template>
+	<random>
+		<li>Ver los patos que estan en el estanque al lado de la ESEI. El otro dia aprendi a diferenciar entre patos y patas.</li>
+		<li>Tirarme en el sofa a ver series en Netflix.</li>
+		<li>Jugar a videojuegos.</li>
+		<li>Salir a dar un paseo.</li>
+	</random>
+</template>
+</category>
+
+<!-- Regla 11v2 Alumno -->
+<category>
+<pattern>* <set>sinonimostiempolibre</set> ^</pattern> <!-- Que te gusta hacer en tu tiempo libre / Tienes algun hobby -->
+<template><srai>TIEMPOLIBRE</srai></template>
+</category>
+
+<!-- Pregunta-12 Alumno -->
+<!-- Regla 12v1 Alumno -->
+<category>
+<pattern>ORDENADORESESEI</pattern>
+<template>Si tienes portatil es mejor que lo traigas porque los ordenadores fallan alguna que otra vez, excepto los ordenadores del SO6 que van como una bala.</template>
+</category>
+
+<!-- Regla 12v2 Alumno -->
+<category>
+<pattern>* <set>sinonimosbien</set> * <set>sinonimosordenador</set> *</pattern> <!-- Funcionan bien los ordenadores de la ESEI -->
+<template><srai>ORDENADORESESEI</srai></template>
+</category>
+
+<!-- Regla 12v3 Alumno -->
+<category>
+<pattern>* <set>sinonimosordenador</set> * <set>sinonimosbien</set></pattern> <!-- Los ordenadores de la ESEI funcionan bien -->
+<template><srai>ORDENADORESESEI</srai></template>
+</category>
+
+<!-- Pregunta-14 Alumno -->
+<!-- Regla 14v1 Alumno -->
+<category>
+<pattern>UTENSILIOSCLASES</pattern>
+<template>Si puedes lleva portatil, libreta, boli y ganas de trabajar. No te hace falta nada más.</template>
+</category>
+
+<!-- Regla 14v2 Alumno -->
+<category>
+<pattern>* <set>sinonimosclase</set> ^</pattern> <!-- Me hace falta algo para clases / Deberia llevar algo a las aulas -->
+<template><srai>UTENSILIOSCLASES</srai></template>
+</category>
+
 
 
 <!-- Pregunta extra 15 -->
