@@ -125,7 +125,7 @@ La ESEI se encuentra en el campus de Ourense, concretamente en Campus As Lagoas,
 <!-- Pregunta 2v8 -->
 
 <category>
-<pattern>^ en que lugar * la <set>sinonimosesei</set></pattern><!--en que lugar esta/se halla la esei-->
+<pattern>* lugar * la <set>sinonimosesei</set></pattern><!--en que lugar esta/se halla la esei-->
 <template>
 <srai>Ubicacion ESEI</srai>
 </template>
@@ -342,15 +342,6 @@ La secretaria esta en el edificio politecnico, a la derecha entrando a la planta
 </template>
 </category>
 
-
-<!-- Pregunta 6v7 -->
-
-<category>
-<pattern>* lugar * la secretaria de la <set>sinonimosesei</set></pattern> <!-- en que lugar esta la secretaria de la esei-->
-<template>
-<srai>secretaria ESEI</srai>
-</template>
-</category>
 
 
 <!-- Pregunta 7 -->

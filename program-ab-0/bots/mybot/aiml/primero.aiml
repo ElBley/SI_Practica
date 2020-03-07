@@ -19,6 +19,14 @@
 <template><srai>SALUDO</srai></template>
 </category>
 
+<category><pattern>* estas</pattern>
+<template><srai>Yo genial, y tu?</srai></template>
+</category>
+
+<category><pattern>^ Adios</pattern>
+<template><srai>Hasta luego</srai></template>
+</category>
+
 
 <!-- Caso Base -->
 <category><pattern>*</pattern>
