@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!-- File: primero.aiml -->
-<!-- Author: Brais Fontan Costas -->
-<!-- Last modified: 28/02/2020 -->
+<!-- Author: Brais Fontan, Yomar Costa, David Santiago Colmenares -->
+<!-- Last modified: 07/03/2020 -->
 <category><pattern>SALUDO</pattern>
 <template>Hola :)</template>
 </category>
@@ -19,25 +19,10 @@
 <template><srai>SALUDO</srai></template>
 </category>
 
-<category><pattern>Es <set>color</set> un color</pattern>
-<template>Si, <star/> es un color</template>
-</category>
-
-<category><pattern>Es * un color</pattern>
-<template>No, <star/> es un color</template>
-</category>
-
-<category><pattern>Cual es la capital de <set>pais</set></pattern>
-<template>La capital de <star/> es <map name = "capital" ><star/></map></template>
-</category>
-
-<category><pattern>Cual es la capital de <set>pais</set></pattern>
-<template>No me se la capital de<star/></template>
-</category>
 
 <!-- Caso Base -->
 <category><pattern>*</pattern>
-<template>MAMA MIA MARCELLO!!</template>
+<template>No te entiendo, puedes decirmelo de otra manera?</template>
 </category>
 
 </aiml>

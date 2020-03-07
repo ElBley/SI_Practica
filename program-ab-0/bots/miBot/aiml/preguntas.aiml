@@ -305,10 +305,20 @@ La secretaria esta en el edificio politecnico, a la derecha entrando a la planta
 </template>
 </category>
 
+
 <!-- Pregunta 6v4 -->
 
 <category>
-<pattern>* esta la secretaria de la <set>sinonimosesei</set></pattern> <!-- en que lugar esta la secretaria de la esei-->
+<pattern>* lugar * la secretaria de la <set>sinonimosesei</set></pattern> <!-- en que lugar se encuentra la secretaria de la esei-->
+<template>
+<srai>secretaria ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 6v5 -->
+
+<category>
+<pattern>* encontrar ^ la secretaria de la <set>sinonimosesei</set></pattern> <!-- donde puedo encontrar la secretaria de la esei-->
 <template>
 <srai>secretaria ESEI</srai>
 </template>
@@ -327,6 +337,16 @@ La secretaria esta en el edificio politecnico, a la derecha entrando a la planta
 
 <category>
 <pattern>* encuentro la secretaria de la <set>sinonimosesei</set></pattern> <!-- donde/como encuentro la secretaria de la esei-->
+<template>
+<srai>secretaria ESEI</srai>
+</template>
+</category>
+
+
+<!-- Pregunta 6v7 -->
+
+<category>
+<pattern>* lugar * la secretaria de la <set>sinonimosesei</set></pattern> <!-- en que lugar esta la secretaria de la esei-->
 <template>
 <srai>secretaria ESEI</srai>
 </template>
@@ -369,6 +389,13 @@ La secretaria esta en el edificio politecnico, a la derecha entrando a la planta
 <!-- Regla 7v6 -->
 <category>
 <pattern>* hora * atender ^</pattern> <!-- A que hora me pueden atender en la secretaria  -->
+<template><srai>HORARIOSECRETARIA</srai></template>
+</category>
+
+
+<!-- Regla 7v7 -->
+<category>
+<pattern>* atiende al publico ^ la secretaria ^</pattern> <!-- cuando atiende al publico la secretaria  -->
 <template><srai>HORARIOSECRETARIA</srai></template>
 </category>
 
