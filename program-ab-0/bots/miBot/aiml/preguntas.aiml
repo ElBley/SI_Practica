@@ -186,7 +186,7 @@ En la ESEI se puede estudiar: Grado en Ingenieria Informatica, doble grado ADE +
 </template>
 </category>
 
-<!-- Pregunta 3v5 -->
+<!-- Pregunta 3v6 -->
 
 <category>
 <pattern>^ que <set>sinonimosoferta</set> formativa * la <set>sinonimosesei</set></pattern> <!-- ¿que oferta/opciones formativa tiene la esei? -->
