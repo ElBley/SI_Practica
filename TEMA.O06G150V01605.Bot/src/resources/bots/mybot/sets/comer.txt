@@ -1,0 +1,9 @@
+comer
+almorzar
+merendar
+tomar
+desayunar
+cafeteria
+bar
+cafe
+comedor

@@ -1,0 +1,5 @@
+comer
+almorzar
+merendar
+tomar algo
+desayunar

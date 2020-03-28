@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: tutor.aiml -->
+<!-- Author: Brais Fontan, Yomar Costa, David Santiago Colmenares -->
+<!-- Last modified: 13/03/2020 -->
+
+<!-- Pregunta 2v10 -->
+
+<category>
+<pattern>* direccion de la <set>sinonimosesei</set></pattern> <!--cual es la direccion de la esei-->
+<template>
+<srai>Ubicacion ESEI</srai>
+</template>
+</category>
+
+
+<!-- Pregunta 4v5 -->
+
+<category>
+<pattern>* mejor estudiar en la <set>sinonimosesei</set> * </pattern> <!-- Es mejor estudiar en la ESEI que en otros centros -->
+<template>
+<srai>pena ESEI</srai>
+</template>
+</category>
+
+
+<!-- Regla 12v3 -->
+<category>
+<pattern>* practicas * empresas * <set>sinonimosalumno</set> * <set>sinonimosesei</set></pattern> <!-- Puedo realizar practicas en empresas como alumno de la ESEI -->
+<template><srai>PRACTICASESEI</srai></template>
+</category>
+
+</aiml>

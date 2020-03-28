@@ -1,0 +1,4 @@
+cafeteria
+bar
+cafe
+comedor
