@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: primero.aiml -->
+<!-- Author: Brais Fontan, Yomar Costa, David Santiago Colmenares -->
+<!-- Last modified: 07/03/2020 -->
+<category><pattern>SALUDO</pattern>
+<template>Hola :)</template>
+</category>
+
+<category><pattern>hola ^</pattern>
+<template><srai>SALUDO</srai></template>
+</category>
+
+<category><pattern>Buenos *</pattern>
+<template><srai>SALUDO</srai></template>
+</category>
+
+<category><pattern>Buenas *</pattern>
+<template><srai>SALUDO</srai></template>
+</category>
+
+<category><pattern>* estas</pattern>
+<template><srai>Yo genial, y tu?</srai></template>
+</category>
+
+<category><pattern>^ Adios</pattern>
+<template><srai>Hasta luego</srai></template>
+</category>
+
+
+<!-- Caso Base -->
+<category><pattern>*</pattern>
+<template><think>
+		<set name="aux"><star/></set>
+	</think>No te entiendo, puedes decirmelo de otra manera?</template>
+
+</category>
+
+<category>
+<pattern>Soy tu botmaster aprende *</pattern>
+<that>No te entiendo puedes decirmelo de otra manera</that>
+<template>
+<learn>
+	<category>
+		<pattern><eval><get name="aux"/></eval></pattern>
+		<template><eval><star/></eval></template>
+	</category>
+</learn>
+	Ok, recordare responder <star/> a <get name="aux"/>
+</template>
+</category>
+
+</aiml>

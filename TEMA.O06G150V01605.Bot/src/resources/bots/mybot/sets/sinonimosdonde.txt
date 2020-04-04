@@ -1,0 +1,8 @@
+donde
+lugar
+ubicacion
+direccion
+zona
+localizacion
+llegar
+ir

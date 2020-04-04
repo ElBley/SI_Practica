@@ -1,0 +1,9 @@
+carrera
+grado
+ingenieria
+ingenieria informatica
+informatica
+primero
+segundo
+tercero
+cuarto

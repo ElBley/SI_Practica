@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: primero.aiml -->
+<!-- Author: Brais Fontan -->
+<!-- Last modified: 27/03/2020 -->
+
+
+<category>
+<pattern>Como tiene el pelo <set>compi</set></pattern>
+<template><star/> tiene el pelo <map name="pelo"><star/></map></template>
+</category>
+
+<category>
+<pattern>Como tiene el pelo *</pattern>
+<template>No lo se</template>
+
+</category>
+
+
+
+<category>
+<pattern>El pelo de * es *</pattern>
+<template>
+	<think>
+		<set var="cap"><srai>como tiene el pelo <star/></srai></set>
+	</think>
+	<condition var="cap">
+		<li value="NO LO SE">
+		<learn>
+			<category>
+			<pattern>
+				Como tiene el pelo <eval><star/></eval>
+			</pattern>
+			<template>
+				El pelo de <eval><star/></eval> es <eval><star index="2"/></eval>
+			</template>
+			</category>
+		</learn>
+		El pelo de <star/> es <star index="2"/>
+		</li>
+		<li>
+			<value><star/> tiene el pelo <star index="2"/></value>
+			<template>Ya sabia como era el pelo de <star/></template>
+		</li>
+		<li>
+			<template>Estas seguro? porque yo creo que el pelo de <star/> es <map name="pelo"><star/></map></template>
+		</li>
+	</condition>
+</template>
+</category>
+
+
+
+
+
+
+
+<category>
+<pattern>De que color tiene los ojos <set>compi</set></pattern>
+<template><star/> tiene los ojos <map name="ojos"><star/></map></template>
+</category>
+
+<category>
+<pattern>De que color tiene los ojos *</pattern>
+<template>No lo se</template>
+
+</category>
+
+
+
+<category>
+<pattern>Los ojos de * son *</pattern>
+<template>
+	<think>
+		<set var="cap"><srai>De que color tiene los ojos <star/></srai></set>
+	</think>
+	<condition var="cap">
+		<li value="NO LO SE">
+		<learn>
+			<category>
+			<pattern>
+				De que color tiene los ojos <eval><star/></eval>
+			</pattern>
+			<template>
+				Los ojos de <eval><star/></eval> son <eval><star index="2"/></eval>
+			</template>
+			</category>
+		</learn>
+		Recordare que los ojos de <star/> son <star index="2"/>
+		</li>
+		<li>
+			<value><star/> tiene los ojos <star index="2"/></value> 
+			<template>Ya sabia el color de ojos de <star/></template>
+		</li>
+		<li><think>
+			<set name="ojo"><star index="2"/></set>
+			</think>
+			<template>Estas seguro? porque yo creo que los ojos de <star/> son <map name="ojos"><star/></map></template>
+		</li>
+	</condition>
+</template>
+</category>
+
+<!--No funciona, no recuerda correctamente-->
+<category>
+	<pattern>Si ^</pattern>
+	<that>porque yo creo que los ojos de * son *</that>
+	<learn>
+			<category>
+			<pattern>
+				De que color tiene los ojos <eval><thatstar/></eval>
+			</pattern>
+			<template>
+				Los ojos de <eval><thatstar/></eval> son <get name="ojo"/>
+			</template>
+			</category>
+	</learn>
+	<template>Okay, pues me apunto para la proxima que los ojos de <thatstar/> son <get name="ojo"/></template>
+</category>
+
+
+<category>
+	<pattern>* tiene los ojos * y el pelo *</pattern>
+	<template><srai>Los ojos de <star/> son <star index="2"/></srai>
+	<srai>El pelo de <star/> es <star index="3"/></srai></template>
+</category>
+
+
+
+
+
+</aiml>
