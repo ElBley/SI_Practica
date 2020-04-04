@@ -67,6 +67,31 @@
 </template>
 </category>
 
+
+<!-- Pregunta 1v0 -->
+<category>
+<pattern>* <set>sinonimosuvigo</set></pattern> <!--que me dices sobre la universidad de vigo-->
+<template><think>
+		<set name="aux"><star/> <star index="2"/></set>
+	</think>Quieres que te hable sobre la uvigo?</template>
+</category>
+
+<category>
+<pattern>si ^</pattern>
+<that>QUIERES QUE TE HABLE SOBRE LA UVIGO</that>
+<template>
+<learn>
+	<category>
+		<pattern><eval><get name="aux"/></eval></pattern>
+		<template><srai>Hablame sobre la Uvigo</srai></template>
+	</category>
+</learn>
+	Recordare hablar sobre la uvigo cuando me preguntes <get name="aux"/>
+<srai>Hablame sobre la Uvigo</srai>
+</template>
+</category>
+
+
 <!-- Pregunta 2 -->
 
 <category>
@@ -140,6 +165,29 @@ La ESEI se encuentra en el campus de Ourense, concretamente en Campus As Lagoas,
 </template>
 </category>
 
+<!-- Pregunta 2v0 -->
+<category>
+<pattern>^ <set>sinonimosdonde</set> * <set>sinonimosesei</set></pattern> <!--donde esei-->
+<template><think>
+        <set name="aux"><star/> <star index="2"/> <star index="3"/></set>
+    </think>Quieres que te diga donde esta la ESEI?</template>
+</category>
+
+<category>
+<pattern>si ^</pattern>
+<that>QUIERES QUE TE DIGA DONDE ESTA LA ESEI</that>
+<template>
+<learn>
+    <category>
+        <pattern><eval><get name="aux"/></eval></pattern>
+        <template><srai>Ubicacion ESEI</srai></template>
+    </category>
+</learn>
+    Recordare decirte donde esta la esei cuando me preguntes <get name="aux"/>
+<srai>Ubicacion ESEI</srai>
+</template>
+</category>
+
 <!-- Pregunta 3 -->
 
 <category>
@@ -196,6 +244,30 @@ En la ESEI se puede estudiar: Grado en Ingenieria Informatica, doble grado ADE +
 </category>
 
 
+<!-- Pregunta 3v0 -->
+<category>
+<pattern>* <set>sinonimosestudios</set> * <set>sinonimosesei</set> ^</pattern> <!--que me dices sobre la universidad de vigo-->
+<template><think>
+        <set name="aux"><star/> <star index="2"/> <star index="3"/> <star index="4"/> <star index="5"/></set>
+    </think>Quieres que te hable sobre que puedes estudiar en la ESEI?</template>
+</category>
+
+<category>
+<pattern>si ^</pattern>
+<that>QUIERES QUE TE HABLE SOBRE QUE PUEDES ESTUDIAR EN LA ESEI</that>
+<template>
+<learn>
+    <category>
+        <pattern><eval><get name="aux"/></eval></pattern>
+        <template><srai>Estudios ESEI</srai></template>
+    </category>
+</learn>
+    Recordare hablar sobre que puedes estudiar en la ESEI cuando me preguntes <get name="aux"/>
+<srai>Estudios ESEI</srai>
+</template>
+</category>
+
+
 <!-- Pregunta 4 -->
 
 <category>
@@ -239,6 +311,29 @@ En la ESEI se puede estudiar: Grado en Ingenieria Informatica, doble grado ADE +
 </template>
 </category>
 
+<!-- Pregunta 4v0 -->
+<category>
+<pattern>* <set>sinonimospena</set> * <set>sinonimosesei</set></pattern> <!--que me dices sobre la universidad de vigo-->
+<template><think>
+        <set name="aux"><star/> <star index="2"/> <star index="3"/> <star index="4"/></set>
+    </think>Quieres que te diga porque merece la pena la esei?</template>
+</category>
+
+<category>
+<pattern>si ^</pattern>
+<that>QUIERES QUE TE DIGA PORQUE MERECE LA PENA LA ESEI</that>
+<template>
+<learn>
+    <category>
+        <pattern><eval><get name="aux"/></eval></pattern>
+        <template><srai>pena ESEI</srai></template>
+    </category>
+</learn>
+    Recordare decirte porque merece la pena la esei cuando me preguntes <get name="aux"/>
+<srai>pena ESEI</srai>
+</template>
+</category>
+
 
 <!-- Pregunta 5 -->
 
@@ -276,6 +371,30 @@ Hay una cafeteria en la planata 0 de la ESEI con unos precios muy economicos y u
 <srai>cafeteria ESEI</srai>
 </template>
 </category>
+
+<!-- Pregunta 5v0 -->
+<category>
+<pattern>* <set>comer</set> ^</pattern> <!--cualquier cosa con comer-->
+<template><think>
+        <set name="aux"><star/> <star index="2"/> <star index="3"/></set>
+    </think>Me estas preguntando si hay una cafeteria en la ESEI?</template>
+</category>
+
+<category>
+<pattern>si ^</pattern>
+<that>ME ESTAS PREGUNTANDO SI HAY UNA CAFETERIA EN LA ESEI</that>
+<template>
+<learn>
+    <category>
+        <pattern><eval><get name="aux"/></eval></pattern>
+        <template><srai>cafeteria ESEI</srai></template>
+    </category>
+</learn>
+    Recordare hablar sobre si hay una cafeteria en la ESEI cuando me preguntes <get name="aux"/>
+<srai>cafeteria ESEI</srai>
+</template>
+</category>
+
 
 <!-- Pregunta 6 -->
 
