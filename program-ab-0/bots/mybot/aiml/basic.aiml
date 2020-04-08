@@ -50,4 +50,40 @@
 </template>
 </category>
 
+
+<category>
+	<pattern>puedes repetirme el dialogo de las ultimas <set>number</set> interpelaciones</pattern>
+	<template>
+		<think>
+			<set var="contador"><star/></set>
+			<set var="salida">Este es el dialogo de las ultimas <star/> interpolaciones: 
+				Human:<request><index><get var="contador"/></index></request>
+				Robot:<response><index><get var="contador"/></index></response>
+			</set>
+		</think>
+		<condition var="contador">
+			<li><value>1</value><get var="salida"/></li>
+			<li>
+				<think>
+					<set var="contador">
+						<map name="predecessor"><get var="contador"/></map>
+					</set>
+					<set var="salida"><get var="salida"/>
+						Human:<request><index><get var="contador"/></index></request>
+						Robot:<response><index><get var="contador"/></index></response>
+					</set> 
+				</think>
+				<loop/>
+			</li>
+		</condition>
+	</template>
+</category>
+
+
+<category>
+	<pattern>puedes recordarme que te he preguntado hace <set>number</set> interpelaciones</pattern>
+	<template>Encantado, hace <star/> interpelaciones me dijiste: <request><index><star/></index></request></template>
+</category>
+
+
 </aiml>
