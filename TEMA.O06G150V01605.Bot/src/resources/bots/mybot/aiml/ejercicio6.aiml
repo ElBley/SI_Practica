@@ -105,6 +105,7 @@
 <category>
 	<pattern>Si ^</pattern>
 	<that>porque yo creo que los ojos de * son *</that>
+	<template>
 	<learn>
 			<category>
 			<pattern>
@@ -115,7 +116,7 @@
 			</template>
 			</category>
 	</learn>
-	<template>Okay, pues me apunto para la proxima que los ojos de <thatstar/> son <get name="ojo"/></template>
+	Okay, pues me apunto para la proxima que los ojos de <thatstar/> son <get name="ojo"/></template>
 </category>
 
 
@@ -126,6 +127,11 @@
 </category>
 
 
+<category>
+	<pattern>Actualiza mis amigos</pattern>
+	<botprop><name>amigos</name><val>Paco,luis,pepe</val></botprop>
+	<template>Hecho :)</template>
+</category>
 
 
 

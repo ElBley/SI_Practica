@@ -127,6 +127,11 @@
 </category>
 
 
+<category>
+	<pattern>Actualiza mis amigos</pattern>
+	<botprop><name>amigos</name><val>Paco,luis,pepe</val></botprop>
+	<template>Hecho :)</template>
+</category>
 
 
 

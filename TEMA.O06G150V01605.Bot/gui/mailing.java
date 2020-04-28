@@ -54,7 +54,7 @@ public class mailing extends DefaultInternalAction {
         Session session = Session.getDefaultInstance(props,    
            new javax.mail.Authenticator() {    
 			   protected PasswordAuthentication getPasswordAuthentication() {
-				   return new PasswordAuthentication("user","password");  
+				   return new PasswordAuthentication("nudillofantabuloso@gmail.com","q21gIIeLBzJo");  
 			   }
 		   });    
 

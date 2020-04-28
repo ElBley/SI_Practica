@@ -140,12 +140,12 @@ El <star/> es un color que no va con tu personalidad.
 		</think>
 		<condition var="cap">
 		<li> <value>NO LO SE</value> 
-			<learn>
+			<learnf>
 				<category>
 					<pattern>^ $CUAL ES LA CAPITAL DE <eval><star/></eval></pattern> 
 					<template>La capital de <eval><star/></eval> es <eval><star index="2"/></eval></template>
 				</category>
-			</learn>
+			</learnf>
 			A partir de ahora, recordaré que la capital de <star/> es <star index="2"/>. 
 		</li>
 		<li> Ya sabia que <get var="cap"/> </li>
@@ -178,6 +178,61 @@ El <star/> es un color que no va con tu personalidad.
 </template>
 </category>
 
+<!-- Reglas de Iria -->
+
+<!-- Reglas para color de ojos -->
+<category>
+	<pattern>$Cual es el color de ojos de <set>compi</set></pattern>
+	<template> <srai>OJOS <star/> </srai> </template>
+</category>
+
+<!-- Reglas para color de pelo -->
+<category>
+	<pattern>$Cual es el color de pelo de <set>compi</set></pattern>
+	<template> <srai>PELO <star/> </srai> </template>
+</category>
+
+<!-- regla 17 -->
+<category>
+<pattern>_ tiene los ojos * y el pelo *</pattern>
+<template>
+	<think>
+		<set var="ojos"><srai>CUAL ES EL COLOR DE OJOS DE <star/></srai></set>  <!-- variable global ojos -->
+		<set var="pelo"><srai>CUAL ES EL COLOR DE PELO DE <star/></srai></set>  <!-- variable global pelo -->
+	</think>
+	<condition var="ojos">
+		<li value="NO SE">
+			<learn>
+				<category>
+				<pattern>CUAL ES EL COLOR DE OJOS DE <eval><star/></eval></pattern>
+				<template>El color de ojos de <eval><star/></eval> es <eval><star index="2"/></eval></template>
+				</category>
+			</learn>
+			No sabia que el color de ojos de <star/> era <star index="2"/> pero ya no se me olvida.
+		</li>
+		<li>Ya sabia que el color de ojos de <star/> era <map name="ojos"><star/></map></li>
+	</condition>
+	<condition var="pelo"> 
+		<li value="NO SE">
+			<learn>
+				<category>
+				<pattern>CUAL ES EL COLOR DE PELO DE <eval><star/></eval></pattern>
+				<template>El color de pelo de <eval><star/></eval> es <eval><star index="3"/></eval></template>
+				</category>
+			</learn>
+			Como podia saber que el color de ojos de <star/> es <star index="2"/> si carezco de ojos, pero ahora lo recordare.
+		</li>
+		<li>Ya sabia que el color de pelo de <star/> era <map name="pelo"><star/></map></li>
+	</condition>
+</template>
+</category>
+
+
+<!--   -->
+
+
+
+
 <!-- Reglas de prueba -->
 <category>
 <pattern>Amigo me llamo *</pattern>
@@ -202,8 +257,89 @@ El <star/> es un color que no va con tu personalidad.
 </category>
 
 <category>
+<pattern> EMAIL </pattern>
+<template><bot name="email"/></template>
+</category>
+
+<category>
+<pattern> ^ tu email ^ </pattern>
+<template><srai>EMAIL</srai></template>
+</category>
+
+<category>
+<pattern> ^ correo electrónico ^ </pattern>
+<template><srai>EMAIL</srai></template>
+</category>
+
+<category>
+<pattern>DIALOGDONE</pattern>
+<template> Este es un histórico del diálogo mantenido hasta la fecha con el bot <bot name="name"/>:
+	Human: <request index="5"/>
+	<bot name="name"/>: <response index="5"/>
+	Human: <request index="4"/>
+	<bot name="name"/>: <response index="4"/>
+	Human: <request index="3"/>
+	<bot name="name"/>: <response index="3"/>
+	Human: <request index="2"/>
+	<bot name="name"/>: <response index="2"/>
+	Human: <request index="1"/>
+	<bot name="name"/>: <response index="1"/>
+
+	Si funciona podemos recuperar cualquier parte del diálogo mantenido, y acceso al resto de ficheros persistentes =>
+Mi <get name="wife"/> es encantadora. 
+
+Modifica la propiedad <botprop><name>edad</name><val>34</val></botprop>
+
+</template>
+</category>
+
+<category>
+<pattern>Traduce al * la frase *</pattern>
+<template> Respondo: <translate> <to><map name="idioma"><star/></map></to> <msg><star index="2"/></msg> </translate> </template>
+</category>
+
+
+<category>
+<pattern>BEFORE *</pattern>
+<template> 
+Este es el diálogo que mantuvimos:
+====================================================================================================
+----------------------------------------------------------------------------------------------------
+Human: <request> <index><star/></index></request>
+<bot name="name"/>: <response> <index><star/></index></response>
+----------------------------------------------------------------------------------------------------
+====================================================================================================
+</template>
+</category>
+
+<category>
+<pattern>LATEST</pattern>
+<template> 
+Este es el último mensaje <request index="1"/> recibido y contestado por <bot name="name"/>
+
+Y esta dividido en las siguientes entregas: 
+Ultima: <input index="2"/> y <br/> Penultima: <input index="3"/>
+Estamos trabajando con la versión <program />
+
+</template>
+</category>
+
+<category>
+<pattern>first * *</pattern>
+<template> <star/> </template>
+</category>
+
+<category>
+<pattern>rest * *</pattern>
+<template> <star index="2"/> </template>
+</category>
+
+<category>
 <pattern>*</pattern>
-<template>¿Me puedes preguntar en otro momento? En estos momentos estoy ocupado pensando sobre un tema delicado</template>
+<template>
+¿Me puedes preguntar en otro momento? En estos momentos <formal>estoy ocupado</formal> pensando sobre un <sentence>tema delicado.</sentence>
+Tu pregunta se divide en PRIMERO: <srai> first <star/> </srai> y RESTO: <srai> rest <star/> </srai>
+</template>
 </category>
 
 </aiml>

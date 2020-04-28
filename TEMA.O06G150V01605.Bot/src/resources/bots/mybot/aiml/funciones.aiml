@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: primero.aiml -->
+<!-- Author: Brais Fontan -->
+<!-- Last modified: 27/03/2020 -->
+
+
+<category>
+<pattern>Envia el siguiente mensaje * tema * a * : *</pattern>
+<template>
+	<mail>
+		<subject><star index="2"/></subject>
+		<to><map name="mail"><star index="3"/></map></to>
+		<msg><star index="4"/></msg>
+	</mail>
+</template>
+</category>
+
+
+<!-- Regla amigos -->
+<category>
+<pattern>Mis amigos son *</pattern>
+<template><botprop><name>amigos</name><val><star/></val></botprop></template>
+</category>
+
+<!-- Regla agregar pais -->
+<category>
+<pattern>Me gustaria que recordaras que * es un pais</pattern>
+<template><addset><new><star/></new>pais.txt</addset></template>
+</category>
+
+<!-- Regla agregar ciudad -->
+<category>
+<pattern>Me gustaria que recordaras que la capital de * es *</pattern>
+<template><addmap><new><star/>:<star index="2"/></new>capital.txt</addmap></template>
+</category>
+
+</aiml>

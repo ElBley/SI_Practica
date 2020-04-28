@@ -17,9 +17,10 @@ MAS prueba {
     environment: Chatter
 
     agents:
-        juan;
+        //juan;
 
-        tester;
+        //tester;
+		student;
 
 }
 
