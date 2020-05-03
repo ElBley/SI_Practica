@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: funciones.aiml -->
+<!-- Author: Brais Fontan -->
+<!-- Last modified: 27/03/2020 -->
+
+
+<category>
+<pattern>Envia el siguiente mensaje * tema * a <set>mail</set> con texto *</pattern>
+<template>
+	<mail>
+		<subject><star index="2"/></subject>
+		<to><map name="mail"><star index="3"/></map></to>
+		<msg><star index="4"/></msg>
+	</mail>
+</template>
+</category>
+
+
+<!-- Regla propiedades -->
+<category>
+<pattern>Tu * es *</pattern>
+<template><botprop><name><star/></name><val><star index="2"/></val></botprop></template>
+</category>
+
+<!--Identificacion-->
+<category>
+<pattern>Soy *</pattern>
+<template><think><set name="username"><star/></set></think>Okay, recordare tu nombre</template>
+</category>
+
+<!--Alta faitic-->
+<category>
+<pattern>* alta en faitic</pattern>
+<template>
+	<condition name="username">
+		<li><value>unknown</value>Necesito que te identifiques primero</li>
+		<li>
+			<mail>
+				<subject>Alta en faitic</subject>
+				<to><map name="mail">master</map></to>
+				<msg>Saludos, soy <get name="username"/> y quisiera inscribirme en la materia <star index="2"/> para este curso</msg>
+			</mail>
+		</li>
+	</condition>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>De que asignatura quieres que te de el alta</that>
+<template>
+		<mail>
+			<subject>Alta en faitic</subject>
+			<to><map name="mail">master</map></to>
+			<msg>Saludos, soy <get name="username"/> y quisiera inscribirme en la materia <star/> para este curso</msg>
+		</mail>
+</template>
+</category>
+
+</aiml>

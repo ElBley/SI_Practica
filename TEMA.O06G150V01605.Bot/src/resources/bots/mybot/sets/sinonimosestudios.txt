@@ -5,4 +5,3 @@ titulos
 titulo
 carreras
 carrera
-estudios

@@ -312,7 +312,12 @@ En ourense hay varias residencias por ejemplo, la resa, pero yo no vivo en ningu
 
 <!-- Regla 14v2 Alumno -->
 <category>
-<pattern>* <set>sinonimosclase</set> ^</pattern> <!-- Me hace falta algo para clases / Deberia llevar algo a las aulas -->
+<pattern>* algo * <set>sinonimosclase</set> ^</pattern> <!-- Me hace falta algo para clases / Deberia llevar algo a las aulas -->
+<template><srai>UTENSILIOSCLASES</srai></template>
+</category>
+
+<category>
+<pattern>* material * <set>sinonimosclase</set> ^</pattern> <!-- Me hace falta algo para clases / Deberia llevar algo a las aulas -->
 <template><srai>UTENSILIOSCLASES</srai></template>
 </category>
 
@@ -357,16 +362,22 @@ En ourense hay varias residencias por ejemplo, la resa, pero yo no vivo en ningu
 </category>
 
 <!-- Pregunta extra 18 -->
+
+<category>
+<pattern>PRACTICASENEMPRESA</pattern> 	<!-- tienes pensado hacer practicas en empresas -->
+<template>Se aprende un monton haciendo practicas en empresas, pero yo aun no he decidido si hacerlas porque hay asignaturas en cuarto muy interesantes</template>
+</category>
+
 <!-- Regla 18v1 -->
 <category>
 <pattern>^ <set>sinonimospretender</set> * practicas ^</pattern> 	<!-- tienes pensado hacer practicas en empresas -->
-<template>Se aprende un monton haciendo practicas en empresas, pero yo aun no he decidido si hacerlas porque hay asignaturas en cuarto muy interesantes</template>
+<template><srai>PRACTICASENEMPRESA</srai></template>
 </category>
 
 <!-- Regla 18v2 -->
 <category>
 <pattern>^ tu * practicas ^</pattern> 	<!-- tu vas a realizar practicas? -->
-<template>Se aprende un monton haciendo practicas en empresas, pero yo aun no he decidido si hacerlas porque hay asignaturas en cuarto muy interesantes</template>
+<template><srai>PRACTICASENEMPRESA</srai></template>
 </category>
 
 <!-- Pregunta extra 19 -->

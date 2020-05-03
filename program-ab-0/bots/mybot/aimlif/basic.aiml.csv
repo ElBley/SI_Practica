@@ -1,0 +1,10 @@
+0,SALUDO,*,*,Hola :),basic.aiml
+0,HOLA ^,*,*,<srai>SALUDO</srai>,basic.aiml
+0,BUENOS *,*,*,<srai>SALUDO</srai>,basic.aiml
+0,BUENAS *,*,*,<srai>SALUDO</srai>,basic.aiml
+0,* ESTAS,*,*,<srai>Yo genial#Comma y tu?</srai>,basic.aiml
+0,^ ADIOS,*,*,<srai>Hasta luego</srai>,basic.aiml
+0,*,*,*,<think>#Newline		<set name="aux"><star/></set>#Newline	</think>No te entiendo#Comma puedes decirmelo de otra manera?,basic.aiml
+0,SOY TU BOTMASTER APRENDE *,NO TE ENTIENDO PUEDES DECIRMELO DE OTRA MANERA,*,<learn>#Newline	<category>#Newline		<pattern><eval><get name="aux"/></eval></pattern>#Newline		<template><eval><star/></eval></template>#Newline	</category>#Newline</learn>#Newline	Ok#Comma recordare responder <star/> a <get name="aux"/>,basic.aiml
+0,PUEDES REPETIRME EL DIALOGO DE LAS ULTIMAS <SET>NUMBER</SET> INTERPELACIONES,*,*,<think>#Newline			<set var="contador"><star/></set>#Newline			<set var="salida">Este es el dialogo de las ultimas <star/> interpolaciones: #Newline				Human:<request><index><get var="contador"/></index></request>#Newline				Robot:<response><index><get var="contador"/></index></response>#Newline			</set>#Newline		</think>#Newline		<condition var="contador">#Newline			<li><value>1</value><get var="salida"/></li>#Newline			<li>#Newline				<think>#Newline					<set var="contador">#Newline						<map name="predecessor"><get var="contador"/></map>#Newline					</set>#Newline					<set var="salida"><get var="salida"/>#Newline						Human:<request><index><get var="contador"/></index></request>#Newline						Robot:<response><index><get var="contador"/></index></response>#Newline					</set> #Newline				</think>#Newline				<loop/>#Newline			</li>#Newline		</condition>,basic.aiml
+0,PUEDES RECORDARME QUE TE HE PREGUNTADO HACE <SET>NUMBER</SET> INTERPELACIONES,*,*,Encantado#Comma hace <star/> interpelaciones me dijiste: <request><index><star/></index></request>,basic.aiml

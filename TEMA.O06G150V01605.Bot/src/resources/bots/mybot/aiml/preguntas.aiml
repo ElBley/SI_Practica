@@ -170,12 +170,12 @@ La ESEI se encuentra en el campus de Ourense, concretamente en Campus As Lagoas,
 <pattern>^ <set>sinonimosdonde</set> * <set>sinonimosesei</set></pattern> <!--donde esei-->
 <template><think>
         <set name="aux"><star/> <star index="2"/> <star index="3"/></set>
-    </think>Quieres que te diga donde esta la ESEI?</template>
+    </think>Quieres que te hable sobre donde esta la ESEI?</template>
 </category>
 
 <category>
 <pattern>si ^</pattern>
-<that>QUIERES QUE TE DIGA DONDE ESTA LA ESEI</that>
+<that>QUIERES QUE TE HABLE SOBRE DONDE ESTA LA ESEI</that>
 <template>
 <learn>
     <category>
@@ -316,12 +316,12 @@ En la ESEI se puede estudiar: Grado en Ingenieria Informatica, doble grado ADE +
 <pattern>* <set>sinonimospena</set> * <set>sinonimosesei</set></pattern> <!--que me dices sobre la universidad de vigo-->
 <template><think>
         <set name="aux"><star/> <star index="2"/> <star index="3"/> <star index="4"/></set>
-    </think>Quieres que te diga porque merece la pena la esei?</template>
+    </think>Quieres que te hable sobre porque merece la pena la esei?</template>
 </category>
 
 <category>
 <pattern>si ^</pattern>
-<that>QUIERES QUE TE DIGA PORQUE MERECE LA PENA LA ESEI</that>
+<that>QUIERES QUE TE HABLE SOBRE PORQUE MERECE LA PENA LA ESEI</that>
 <template>
 <learn>
     <category>
@@ -377,12 +377,12 @@ Hay una cafeteria en la planata 0 de la ESEI con unos precios muy economicos y u
 <pattern>* <set>comer</set> ^</pattern> <!--cualquier cosa con comer-->
 <template><think>
         <set name="aux"><star/> <star index="2"/> <star index="3"/></set>
-    </think>Me estas preguntando si hay una cafeteria en la ESEI?</template>
+    </think>Quieres que te hable sobre si hay una cafeteria en la ESEI?</template>
 </category>
 
 <category>
 <pattern>si ^</pattern>
-<that>ME ESTAS PREGUNTANDO SI HAY UNA CAFETERIA EN LA ESEI</that>
+<that>QUIERES QUE TE HABLE SOBRE SI HAY UNA CAFETERIA EN LA ESEI</that>
 <template>
 <learn>
     <category>
@@ -462,6 +462,52 @@ La secretaria esta en el edificio politecnico, a la derecha entrando a la planta
 </category>
 
 
+<!-- Pregunta 6v0 -->
+<category>
+<pattern>* <set>indicarsecretaria</set> * secretaria de la <set>sinonimosesei</set></pattern> <!--Como llego a la Secretaria de la ESEI-->
+<template><think>
+        <set name="aux"><star/> <star index="2"/> <star index="3"/> secretaria de la <star index="4"/></set>
+    </think>Quieres que te hable sobre donde se encuentra la secretaria de la ESEI?</template>
+</category>
+
+<category>
+<pattern>si ^</pattern>
+<that>QUIERES QUE TE HABLE SOBRE DONDE SE ENCUENTRA LA SECRETARIA DE LA ESEI</that>
+<template>
+<learn>
+    <category>
+        <pattern><eval><get name="aux"/></eval></pattern>
+        <template><srai>secretaria ESEI</srai></template>
+    </category>
+</learn>
+    Recordare hablar sobre donde se encuentra la secretaria de la ESEI cuando me preguntes <get name="aux"/>
+<srai>secretaria ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta 6v7 -->
+<category>
+<pattern>* tramites administrativos * <set>sinonimosesei</set></pattern> <!--que me dices sobre la universidad de vigo-->
+<template><think>
+        <set name="aux"><star/> tramites administrativos <star index="2"/> <star index="3"/></set>
+    </think>Quieres que te hable sobre donde se encuentra la secretaria de la ESEI?</template>
+</category>
+
+<category>
+<pattern>si ^</pattern>
+<that>QUIERES QUE TE HABLE SOBRE DONDE SE ENCUENTRA LA SECRETARIA DE LA ESEI</that>
+<template>
+<learn>
+    <category>
+        <pattern><eval><get name="aux"/></eval></pattern>
+        <template><srai>secretaria ESEI</srai></template>
+    </category>
+</learn>
+    Recordare hablar sobre donde se encuentra la secretaria de la ESEI cuando me preguntes <get name="aux"/>
+<srai>secretaria ESEI</srai>
+</template>
+</category>
+
 
 <!-- Pregunta 7 -->
 
@@ -509,7 +555,51 @@ La secretaria esta en el edificio politecnico, a la derecha entrando a la planta
 <template><srai>HORARIOSECRETARIA</srai></template>
 </category>
 
+<!-- Pregunta 7v0 -->
+<category>
+<pattern>* matricula ^</pattern> <!--Como llego a la Secretaria de la ESEI-->
+<template><think>
+        <set name="aux"><star/> matricula <star index="2"/></set>
+    </think>Quieres que te hable sobre que horario de atencion al publico tiene la secretaria del centro?</template>
+</category>
 
+<category>
+<pattern>si ^</pattern>
+<that>QUIERES QUE TE HABLE SOBRE QUE HORARIO DE ATENCION AL PUBLICO TIENE LA SECRETARIA DEL CENTRO</that>
+<template>
+<learn>
+    <category>
+        <pattern><eval><get name="aux"/></eval></pattern>
+        <template><srai>HORARIOSECRETARIA</srai></template>
+    </category>
+</learn>
+    Recordare hablar sobre que horario de atencion al publico tiene la secretaria del centro cuando me preguntes <get name="aux"/>
+<srai>HORARIOSECRETARIA</srai>
+</template>
+</category>
+
+<!-- Regla 7v8 -->
+<category>
+<pattern>* secretaria a preguntar por mi matricula</pattern> <!-- cuando atiende al publico la secretaria  -->
+<template><think>
+        <set name="aux"><star/> secretaria a preguntar por mi matricula</set>
+    </think>Quieres que te hable sobre que horario de atencion al publico tiene la secretaria del centro?</template>
+</category>
+
+<category>
+<pattern>si ^</pattern>
+<that>QUIERES QUE TE HABLE SOBRE QUE HORARIO DE ATENCION AL PUBLICO TIENE LA SECRETARIA DEL CENTRO</that>
+<template>
+<learn>
+    <category>
+        <pattern><eval><get name="aux"/></eval></pattern>
+        <template><srai>HORARIOSECRETARIA</srai></template>
+    </category>
+</learn>
+    Recordare hablar sobre que horario de atencion al publico tiene la secretaria del centro cuando me preguntes <get name="aux"/>
+<srai>HORARIOSECRETARIA</srai>
+</template>
+</category>
 
 <!-- Pregunta 8 -->
 
@@ -547,6 +637,29 @@ Primero se comunica al centro el nombre el alumno para dar a conocerlo entre la 
 <template><srai>NECESIDADESESPECIALES</srai></template>
 </category>
 
+<!-- Pregunta 9v0 -->
+<category>
+<pattern><set>cosasnecesidadesespeciales</set> * <set>necesidadesespeciales</set></pattern> <!--Como llego a la Secretaria de la ESEI-->
+<template><think>
+        <set name="aux"><star/> <star index="2"/> <star index="3"/></set>
+    </think>Quieres que te hable sobre cual es el protocolo de acogida de alumnos con necesidades educativas especiales?</template>
+</category>
+
+<category>
+<pattern>si ^</pattern>
+<that>QUIERES QUE TE HABLE SOBRE CUAL ES EL PROTOCOLO DE ACOGIDA DE ALUMNOS CON NECESIDADES EDUCATIVAS ESPECIALES</that>
+<template>
+<learn>
+    <category>
+        <pattern><eval><get name="aux"/></eval></pattern>
+        <template><srai>NECESIDADESESPECIALES</srai></template>
+    </category>
+</learn>
+    Recordare hablar sobre cual es el protocolo de acogida de alumnos con necesidades educativas especiales cuando me preguntes <get name="aux"/>
+<srai>NECESIDADESESPECIALES</srai>
+</template>
+</category>
+
 <!-- Pregunta 10 -->
 
 <!-- Regla 10v1 -->
@@ -557,13 +670,13 @@ Primero se comunica al centro el nombre el alumno para dar a conocerlo entre la 
 
 <!-- Regla 10v2 -->
 <category>
-<pattern>* delegacion de alumnos * <set>sinonimosesei</set></pattern> <!-- Hay alguna delegacion de alumnos en la ESEI -->
+<pattern>* <set>delegacionalumnos</set> * <set>sinonimosesei</set></pattern> <!-- Hay alguna delegacion de alumnos en la ESEI -->
 <template><srai>DELEGACIONALUMNOS</srai></template>
 </category>
 
 <!-- Regla 10v3 -->
 <category>
-<pattern>* <set>sinonimosesei</set> * delegacion de alumnos</pattern> <!-- En la ESEI existe alguna delegacion de alumnos -->
+<pattern>* <set>sinonimosesei</set> * <set>delegacionalumnos</set></pattern> <!-- En la ESEI existe alguna delegacion de alumnos -->
 <template><srai>DELEGACIONALUMNOS</srai></template>
 </category>
 
@@ -602,6 +715,29 @@ Primero se comunica al centro el nombre el alumno para dar a conocerlo entre la 
 <template><srai>PRACTICASESEI</srai></template>
 </category>
 
+<!-- Pregunta 12v0 -->
+<category>
+<pattern>* practicas * <set>sinonimosesei</set></pattern> <!--Como llego a la Secretaria de la ESEI-->
+<template><think>
+        <set name="aux"><star/> practicas <star index="2"/> <star index="3"/></set>
+    </think>Quieres que te hable sobre que tipo de practicas puedes realizar como alumno de la ESEI?</template>
+</category>
+
+<category>
+<pattern>si ^</pattern>
+<that>QUIERES QUE TE HABLE SOBRE QUE TIPO DE PRACTICAS PUEDES REALIZAR COMO ALUMNO DE LA ESEI</that>
+<template>
+<learn>
+    <category>
+        <pattern><eval><get name="aux"/></eval></pattern>
+        <template><srai>PRACTICASESEI</srai></template>
+    </category>
+</learn>
+    Recordare hablar sobre que tipo de practicas puedes realizar como alumno de la ESEI cuando me preguntes <get name="aux"/>
+<srai>PRACTICASESEI</srai>
+</template>
+</category>
+
 
 <!-- Pregunta 13 -->
 
@@ -624,6 +760,29 @@ Por otro lado si quieres realizar practicas extracurriculares puedes negociar tu
 <category>
 <pattern>* practicas ^ ofertadas^</pattern> <!-- Donde puedo consultar la practicas ofertadas -->
 <template><srai>DONDE PRACTICAS</srai></template>
+</category>
+
+<!-- Pregunta 13v0 -->
+<category>
+<pattern>* empresas * practicas</pattern> <!--Como llego a la Secretaria de la ESEI-->
+<template><think>
+        <set name="aux"><star/> empresas <star index="2"/> practicas</set>
+    </think>Quieres que te hable sobre donde puedes consultar la oferta de practicas en empresas?</template>
+</category>
+
+<category>
+<pattern>si ^</pattern>
+<that>QUIERES QUE TE HABLE SOBRE DONDE PUEDES CONSULTAR LA OFERTA DE PRACTICAS EN EMPRESAS</that>
+<template>
+<learn>
+    <category>
+        <pattern><eval><get name="aux"/></eval></pattern>
+        <template><srai>DONDE PRACTICAS</srai></template>
+    </category>
+</learn>
+    Recordare hablar sobre donde puedes consultar la oferta de practicas en empresas cuando me preguntes <get name="aux"/>
+<srai>DONDE PRACTICAS</srai>
+</template>
 </category>
 
 
@@ -655,12 +814,35 @@ Tambien cabe mencionar la conserjeria, la administracion y la delegacion de alum
 <template><srai>RECURSOS</srai></template>
 </category>
 
+<!-- Pregunta 14v0 -->
+<category>
+<pattern>* <set>instalaciones</set> * <set>sinonimosesei</set></pattern> <!--Como llego a la Secretaria de la ESEI-->
+<template><think>
+        <set name="aux"><star/> <star index="2"/> <star index="3"/> <star index="4"/></set>
+    </think>Quieres que te hable sobre los recursos materiales y servicios con los que cuenta la ESEI?</template>
+</category>
+
+<category>
+<pattern>si ^</pattern>
+<that>QUIERES QUE TE HABLE SOBRE LOS RECURSOS MATERIALES Y SERVICIOS CON LOS QUE CUENTA LA ESEI</that>
+<template>
+<learn>
+    <category>
+        <pattern><eval><get name="aux"/></eval></pattern>
+        <template><srai>RECURSOS</srai></template>
+    </category>
+</learn>
+    Recordare hablar sobre los recursos materiales y servicios con los que cuenta la ESEI cuando me preguntes <get name="aux"/>
+<srai>RECURSOS</srai>
+</template>
+</category>
+
 <!-- Pregunta 15 -->
 <!-- Regla 15v1 -->
 <category>
 <pattern>TFG</pattern>
 <template>
-	Es necesario realizar un trabajo al finalizar tanto la carrera como el master. El trabajo ha de ser tutelado por algun profesor del centro. La asignacion de trabajos puede ser directa, por acuerdo propio entre estudiante y profesor; o por peticion, seleccionadas por el alumnado a partir de las propuestas ofrecidas por el profesorado.
+    Es necesario realizar un trabajo al finalizar tanto la carrera como el master. El trabajo ha de ser tutelado por algun profesor del centro. La asignacion de trabajos puede ser directa, por acuerdo propio entre estudiante y profesor; o por peticion, seleccionadas por el alumnado a partir de las propuestas ofrecidas por el profesorado.
 </template>
 </category>
 
@@ -676,9 +858,9 @@ Tambien cabe mencionar la conserjeria, la administracion y la delegacion de alum
 <category>
 <pattern>BIBLIOTECA</pattern>
 <template>
-	La sede de la biblioteca de la uvigo de Ourense se encuentra en la entrada del campus norte, a lado de la piscina.
-	Puedes consultar el catálogo de la biblioteca para ver la disponibilidad de el recurso en el que estés interesado, y si no esta disponible en la sede de Ourense se puede solicitar a otra de las bibliotecas de la Uvigo.
-	Puedes ver el catalogo aqui: http://www.perseo.biblioteca.uvigo.es
+    La sede de la biblioteca de la uvigo de Ourense se encuentra en la entrada del campus norte, a lado de la piscina.
+    Puedes consultar el catálogo de la biblioteca para ver la disponibilidad de el recurso en el que estés interesado, y si no esta disponible en la sede de Ourense se puede solicitar a otra de las bibliotecas de la Uvigo.
+    Puedes ver el catalogo aqui: http://www.perseo.biblioteca.uvigo.es
 </template>
 </category>
 
@@ -695,7 +877,7 @@ Tambien cabe mencionar la conserjeria, la administracion y la delegacion de alum
 <category>
 <pattern>ASISTENCIA</pattern>
 <template>
-	Los profesores realizan control de asistencia en los examenes y revisiones haciendo un registro donde hay que firmar conforme asististe. En algunos de estos casos es necesario también enseñar el DNI o algún tipo de indentificador para evitar el fraude de identidad.
+    Los profesores realizan control de asistencia en los examenes y revisiones haciendo un registro donde hay que firmar conforme asististe. En algunos de estos casos es necesario también enseñar el DNI o algún tipo de indentificador para evitar el fraude de identidad.
 </template>
 </category>
 
@@ -710,7 +892,7 @@ Tambien cabe mencionar la conserjeria, la administracion y la delegacion de alum
 <category>
 <pattern>DEPORTES</pattern>
 <template>
-	En la universidad existen muchas opciones para hacer ejercicio, pero si no eres profesional en ningún deporte yo te recomiendo que empieces por una de las clases de inciación en estos. Hay clases muy distintas, por ejemplo bádminton, escalada, tenis, rugby, natación o ajedrez. Aqui puedes ver todas las opciones disponibles a ver si encuentras una que te guste: "https://campusactivo.uvigo.gal/campusactivo/publica/actividad/lista.xhtml"
+    En la universidad existen muchas opciones para hacer ejercicio, pero si no eres profesional en ningún deporte yo te recomiendo que empieces por una de las clases de inciación en estos. Hay clases muy distintas, por ejemplo bádminton, escalada, tenis, rugby, natación o ajedrez. Aqui puedes ver todas las opciones disponibles a ver si encuentras una que te guste: "https://campusactivo.uvigo.gal/campusactivo/publica/actividad/lista.xhtml"
 </template>
 </category>
 

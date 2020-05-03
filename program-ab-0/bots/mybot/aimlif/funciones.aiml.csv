@@ -1,0 +1,4 @@
+0,ENVIA EL SIGUIENTE MENSAJE * TEMA * A <SET>MAIL</SET> CON TEXTO *,*,*,<mail>#Newline		<subject><star index="2"/></subject>#Newline		<to><map name="mail"><star index="3"/></map></to>#Newline		<msg><star index="4"/></msg>#Newline	</mail>,funciones.aiml
+0,TU * ES *,*,*,<botprop><name><star/></name><val><star index="2"/></val></botprop>,funciones.aiml
+0,SOY *,*,*,<think><set name="username"><star/></set></think>Okay#Comma recordare tu nombre,funciones.aiml
+0,* ALTA EN * EN FAITIC,*,*,<condition name="username">#Newline		<li><value>unknown</value>Necesito que te identifiques primero</li>#Newline		<li>#Newline			<mail>#Newline				<subject>Alta en faitic</subject>#Newline				<to><map name="mail">master</map></to>#Newline				<msg>Saludos#Comma soy <get name="username"/> y quisiera inscribirme en la materia <star index="2"/> para este curso</msg>#Newline			</mail>#Newline		</li>#Newline	</condition>,funciones.aiml

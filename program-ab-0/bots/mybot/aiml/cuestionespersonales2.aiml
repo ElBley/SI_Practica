@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: cuestionespersonales.aiml -->
+<!-- Author: Brais Fontan, Yomar Costa, David Santiago Colmenares -->
+<!-- Last modified: 06/03/2020 -->
+
+
+<!-- Pregunta extra 3 -->
+<category>
+<pattern>* estudias en la <set>sinonimosesei</set></pattern>  <!-- Hablame un poco de ti-->
+<template>
+<srai>pena ESEI</srai>
+</template>
+</category>
+
+<!-- Pregunta extra 4 -->
+<category>
+<pattern>Que * hacer * <set>acabarsinonimos</set> tus estudios</pattern>
+<template>
+Estudiar otra carrera.
+</template>
+</category>
+
+<!-- Pregunta extra 5 -->
+<category>
+<pattern>* amigos * <set>sinonimosesei</set></pattern>
+<template>
+Claro, mis amigos David y Brais son muy majos.
+</template>
+</category>
+
+<!-- Pregunta extra 6-->
+<category>
+<pattern><set>sinonimoshacer</set> * actividad extraescolar</pattern>
+<template>
+Si, me gusta mucho el deporte, voy a natacion todos los días.
+</template>
+</category>
+
+<!-- Pregunta extra 7 -->
+<category>
+<pattern>* horario * tienes </pattern>
+<template>
+Todos los dias de 9 a 12:45.
+</template>
+</category>
+
+<!-- Pregunta extra 9 -->
+<category>
+<pattern>Tienes necesidades educativas ^ </pattern>
+<template>
+No, pero existe un protocolo de acogida muy interesante
+</template>
+</category>
+
+<!-- Pregunta extra 10 -->
+<category>
+<pattern><set>sinonimoseres</set> * delegacion de alumnos </pattern>
+<template>
+No, yo solo me quejo.
+</template>
+</category>
+
+
+<!-- Pregunta extra 11 -->
+<category>
+<pattern>Eres un ^ Erasmus </pattern>
+<template>
+No, con el coronavirus las fronteras estan cerradas.
+</template>
+</category>
+
+<!-- Pregunta extra 120 -->
+<category>
+<pattern>* <set>sinonimostipo</set> de practicas te gustaria <set>sinonimoshacer</set> ^</pattern>
+<template>
+Cualquiera que no tenga que ver con la programacion.
+</template>
+</category>
+
+<!-- Pregunta extra 13 -->
+<category>
+<pattern>* empresa ^ te gustaria <set>sinonimoshacer</set> las practicas</pattern>
+<template>
+<srai>PRACTICASENEMPRESA</srai>
+</template>
+</category>
+
+<!-- Pregunta extra 14 -->
+<category>
+<pattern>* concedido * beca ^</pattern>
+<template>
+Si, la del ministerio.
+</template>
+</category>
+
+<!-- Pregunta extra 14 -->
+<category>
+<pattern>Te gustaria * por hacer tu TFG</pattern>
+<template>
+Si implica mucho mas trabajo no, al fin y al cabo es una asignatura mas y hay que administrar muy bien el tiempo.
+</template>
+</category>
+
+<!-- Pregunta extra 16 -->
+<category>
+<pattern>^ Has ido ^ a la Biblioteca</pattern>
+<template>
+Si, pero no me gusta mucho.
+</template>
+</category>
+
+<!-- Pregunta extra 16v2 -->
+<category>
+<pattern>^ Fuiste ^ a la Biblioteca</pattern>
+<template>
+Si, pero no me gusta mucho.
+</template>
+</category>
+
+<!-- Pregunta extra 16v2 -->
+<category>
+<pattern> * revisar alguna nota de ^ <set>si</set></pattern>
+<template>
+No, por ahora no.
+</template>
+</category>
+
+<!-- Pregunta extra 16v2 -->
+<category>
+<pattern>Que actividades ^ ocio *</pattern>
+<template>
+Bailar y cantar.
+</template>
+</category>
+
+
+<!-- 
+1-3-4-5-6-7??-9-10-11-12??-13-14-15??-16??-17-18
+aq(1, " Hablame un poco de ti ").
+aq(3, " Por que estudias en la ESEI ").
+aq(4, " Que quieres hacer cuando termines tus estudios ").
+aq(5, " Tienes amigos en la ESEI ").
+aq(6, " Realizas alguna actividad extraescolar ").
+aq(7, " Que horario de clases tienes ").
+aq(9, " Tienes necesidades educativas especiales ").
+aq(10, " Perteneces a la delegacion de alumnos ").
+aq(11, " Eres un alumno Erasmus ").
+aq(12, " Que tipo de practicas te gustaria realizar como alumno de la ESEI ").
+aq(13, " En que empresa te gustaria realizar las practicas ").
+aq(14, " Te han concedido alguna beca de estudios ").
+aq(15, " Te gustaria obtener una retribucion por hacer tu TFG ").
+aq(16, " Has ido alguna vez a la Biblioteca ").
+aq(17, " Quieres revisar alguna nota de la materia de Sistemas Inteligentes ").
+aq(18, " Que actividades ocio te gustan mas ").
+
+
+-->
+
+
+
+</aiml>
+

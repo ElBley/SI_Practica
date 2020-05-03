@@ -1,0 +1,81 @@
+0,HABLAME SOBRE LA UVIGO,*,*,<random>#Newline	<li>En los campus de la Uvigo puedes estudiar mas de 100 grados y masters oficiales y mas de 30 programas de doctorado.</li>#Newline	<li>La Universidad de Vigo tiene lugares muy bonitos y tranquilos como la zona del Cuvi.</li>#Newline	<li>La Universidad de Vigo tiene 3 campus: Ourense#Comma Vigo y Pontevedra.</li>#Newline	<li>La Universidad de Vigo se conoce por Uvigo o Universidad de Vigo</li>#Newline	<li>La Uvigo cuenta con El Campus de Excelencia Internacional#Comma llamado Campus do Mar.</li>#Newline</random>,preguntas.aiml
+0,QUE ES LA <SET>SINONIMOSUVIGO</SET>,*,*,<srai>Hablame sobre la Uvigo</srai>,preguntas.aiml
+0,<SET>SINONIMOSHABLAR</SET> * <SET>SINONIMOSUVIGO</SET>,*,*,<srai>Hablame sobre la Uvigo</srai>,preguntas.aiml
+0,* SOBRE LA <SET>SINONIMOSUVIGO</SET>,*,*,<srai>Hablame sobre la Uvigo</srai>,preguntas.aiml
+0,* ACERCA DE LA <SET>SINONIMOSUVIGO</SET>,*,*,<srai>Hablame sobre la Uvigo</srai>,preguntas.aiml
+0,^ SABES * <SET>SINONIMOSUVIGO</SET>,*,*,<srai>Hablame sobre la Uvigo</srai>,preguntas.aiml
+0,^ INFORMACION ^ <SET>SINONIMOSUVIGO</SET>,*,*,<srai>Hablame sobre la Uvigo</srai>,preguntas.aiml
+0,* <SET>SINONIMOSUVIGO</SET>,*,*,<think>#Newline		<set name="aux"><star/> <star index="2"/></set>#Newline	</think>Quieres que te hable sobre la uvigo?,preguntas.aiml
+0,SI ^,QUIERES QUE TE HABLE SOBRE LA UVIGO,*,<learn>#Newline	<category>#Newline		<pattern><eval><get name="aux"/></eval></pattern>#Newline		<template><srai>Hablame sobre la Uvigo</srai></template>#Newline	</category>#Newline</learn>#Newline	Recordare hablar sobre la uvigo cuando me preguntes <get name="aux"/>#Newline<srai>Hablame sobre la Uvigo</srai>,preguntas.aiml
+0,UBICACION ESEI,*,*,La ESEI se encuentra en el campus de Ourense#Comma concretamente en Campus As Lagoas#Comma situado cerca de la Escuela Oficial de Idiomas de Ourense.,preguntas.aiml
+0,^ DONDE ESTA LA <SET>SINONIMOSESEI</SET>,*,*,<srai>Ubicacion ESEI</srai>,preguntas.aiml
+0,^ DONDE SE ENCUENTRA LA <SET>SINONIMOSESEI</SET>,*,*,<srai>Ubicacion ESEI</srai>,preguntas.aiml
+0,^ DONDE SE HALLA LA <SET>SINONIMOSESEI</SET>,*,*,<srai>Ubicacion ESEI</srai>,preguntas.aiml
+0,* UBICACION DE LA <SET>SINONIMOSESEI</SET>,*,*,<srai>Ubicacion ESEI</srai>,preguntas.aiml
+0,^ DONDE ^ ENCONTRAR LA <SET>SINONIMOSESEI</SET>,*,*,<srai>Ubicacion ESEI</srai>,preguntas.aiml
+0,* LUGAR * LA <SET>SINONIMOSESEI</SET>,*,*,<srai>Ubicacion ESEI</srai>,preguntas.aiml
+0,^ COMO PUEDO <SET>SINONIMOSIR</SET> * <SET>SINONIMOSESEI</SET>,*,*,<srai>Ubicacion ESEI</srai>,preguntas.aiml
+0,^ <SET>SINONIMOSDONDE</SET> * <SET>SINONIMOSESEI</SET>,*,*,<think>#Newline        <set name="aux"><star/> <star index="2"/> <star index="3"/></set>#Newline    </think>Quieres que te diga donde esta la ESEI?,preguntas.aiml
+0,SI ^,QUIERES QUE TE DIGA DONDE ESTA LA ESEI,*,<learn>#Newline    <category>#Newline        <pattern><eval><get name="aux"/></eval></pattern>#Newline        <template><srai>Ubicacion ESEI</srai></template>#Newline    </category>#Newline</learn>#Newline    Recordare decirte donde esta la esei cuando me preguntes <get name="aux"/>#Newline<srai>Ubicacion ESEI</srai>,preguntas.aiml
+0,ESTUDIOS ESEI,*,*,En la ESEI se puede estudiar: Grado en Ingenieria Informatica#Comma doble grado ADE + II#Comma Master Universitario en II#Comma suplemento europeo al titulo y estudios de doctoramiento.,preguntas.aiml
+0,* PUEDO ESTUDIAR EN LA <SET>SINONIMOSESEI</SET>,*,*,<srai>Estudios ESEI</srai>,preguntas.aiml
+0,* PUEDEN ESTUDIAR EN LA <SET>SINONIMOSESEI</SET>,*,*,<srai>Estudios ESEI</srai>,preguntas.aiml
+0,* CURSAR EN LA <SET>SINONIMOSESEI</SET>,*,*,<srai>Estudios ESEI</srai>,preguntas.aiml
+0,* <SET>SINONIMOSOFERTA</SET> DE ESTUDIOS * LA <SET>SINONIMOSESEI</SET>,*,*,<srai>Estudios ESEI</srai>,preguntas.aiml
+0,^ QUE <SET>SINONIMOSOFERTA</SET> FORMATIVA * LA <SET>SINONIMOSESEI</SET>,*,*,<srai>Estudios ESEI</srai>,preguntas.aiml
+0,* <SET>SINONIMOSESTUDIOS</SET> * <SET>SINONIMOSESEI</SET> ^,*,*,<think>#Newline        <set name="aux"><star/> <star index="2"/> <star index="3"/> <star index="4"/> <star index="5"/></set>#Newline    </think>Quieres que te hable sobre que puedes estudiar en la ESEI?,preguntas.aiml
+0,SI ^,QUIERES QUE TE HABLE SOBRE QUE PUEDES ESTUDIAR EN LA ESEI,*,<learn>#Newline    <category>#Newline        <pattern><eval><get name="aux"/></eval></pattern>#Newline        <template><srai>Estudios ESEI</srai></template>#Newline    </category>#Newline</learn>#Newline    Recordare hablar sobre que puedes estudiar en la ESEI cuando me preguntes <get name="aux"/>#Newline<srai>Estudios ESEI</srai>,preguntas.aiml
+0,PENA ESEI,*,*,<random>#Newline	<li>Contamos con una amplia oferta formativa y laboral.</li>#Newline	<li>Contamos con una delegacion de alumnos muy activa y fomentamos mucho el trabajo en equipo</li>#Newline	<li>En la ESEI tienes un horario de clases bastante reducido en comparacion con otras ingenierias.</li>#Newline	<li>Estudiar en la ESEI te da acceso a ventajas como reservar seminarios. </li>#Newline	<li>La ESEI cuenta con gran cantidad de profesores expertos en sus materias.</li>#Newline</random>,preguntas.aiml
+0,^ POR QUE * LA PENA * EN LA <SET>SINONIMOSESEI</SET>,*,*,<srai>pena ESEI</srai>,preguntas.aiml
+0,* MOTIVOS PARA ESTUDIAR EN LA <SET>SINONIMOSESEI</SET>,*,*,<srai>pena ESEI</srai>,preguntas.aiml
+0,^ POR QUE DEBERIA * EN LA <SET>SINONIMOSESEI</SET>,*,*,<srai>pena ESEI</srai>,preguntas.aiml
+0,* <SET>SINONIMOSPENA</SET> * <SET>SINONIMOSESEI</SET>,*,*,<think>#Newline        <set name="aux"><star/> <star index="2"/> <star index="3"/> <star index="4"/></set>#Newline    </think>Quieres que te diga porque merece la pena la esei?,preguntas.aiml
+0,SI ^,QUIERES QUE TE DIGA PORQUE MERECE LA PENA LA ESEI,*,<learn>#Newline    <category>#Newline        <pattern><eval><get name="aux"/></eval></pattern>#Newline        <template><srai>pena ESEI</srai></template>#Newline    </category>#Newline</learn>#Newline    Recordare decirte porque merece la pena la esei cuando me preguntes <get name="aux"/>#Newline<srai>pena ESEI</srai>,preguntas.aiml
+0,CAFETERIA ESEI,*,*,Hay una cafeteria en la planata 0 de la ESEI con unos precios muy economicos y un ambiente muy agradable.,preguntas.aiml
+0,* <SET>SINONIMOSCAFETERIA</SET> EN LA <SET>SINONIMOSESEI</SET>,*,*,<srai>cafeteria ESEI</srai>,preguntas.aiml
+0,^ LA <SET>SINONIMOSESEI</SET> * <SET>SINONIMOSCAFETERIA</SET>,*,*,<srai>cafeteria ESEI</srai>,preguntas.aiml
+0,DONDE * <SET>SINONIMOSCOMER</SET> * <SET>SINONIMOSESEI</SET>,*,*,<srai>cafeteria ESEI</srai>,preguntas.aiml
+0,* <SET>COMER</SET> ^,*,*,<think>#Newline        <set name="aux"><star/> <star index="2"/> <star index="3"/></set>#Newline    </think>Me estas preguntando si hay una cafeteria en la ESEI?,preguntas.aiml
+0,SI ^,ME ESTAS PREGUNTANDO SI HAY UNA CAFETERIA EN LA ESEI,*,<learn>#Newline    <category>#Newline        <pattern><eval><get name="aux"/></eval></pattern>#Newline        <template><srai>cafeteria ESEI</srai></template>#Newline    </category>#Newline</learn>#Newline    Recordare hablar sobre si hay una cafeteria en la ESEI cuando me preguntes <get name="aux"/>#Newline<srai>cafeteria ESEI</srai>,preguntas.aiml
+0,SECRETARIA ESEI,*,*,La secretaria esta en el edificio politecnico#Comma a la derecha entrando a la planta 0 por la entrada principal.,preguntas.aiml
+0,^ DONDE * LA SECRETARIA DE LA <SET>SINONIMOSESEI</SET>,*,*,<srai>secretaria ESEI</srai>,preguntas.aiml
+0,* UBICACION DE LA SECRETARIA DE LA <SET>SINONIMOSESEI</SET>,*,*,<srai>secretaria ESEI</srai>,preguntas.aiml
+0,* LUGAR * LA SECRETARIA DE LA <SET>SINONIMOSESEI</SET>,*,*,<srai>secretaria ESEI</srai>,preguntas.aiml
+0,* ENCONTRAR ^ LA SECRETARIA DE LA <SET>SINONIMOSESEI</SET>,*,*,<srai>secretaria ESEI</srai>,preguntas.aiml
+0,* PUEDO <SET>SINONIMOSIR</SET> ^ LA SECRETARIA DE LA <SET>SINONIMOSESEI</SET>,*,*,<srai>secretaria ESEI</srai>,preguntas.aiml
+0,* ENCUENTRO LA SECRETARIA DE LA <SET>SINONIMOSESEI</SET>,*,*,<srai>secretaria ESEI</srai>,preguntas.aiml
+0,HORARIOSECRETARIA,*,*,La secretaria de la ESEI atiende al publico de lunes a viernes entre las 09:00 y 14:00 h.,preguntas.aiml
+0,* HORARIO DE ATENCION AL PUBLICO *,*,*,<srai>HORARIOSECRETARIA</srai>,preguntas.aiml
+0,* HORARIO * ATENCION AL PUBLICO ^,*,*,<srai>HORARIOSECRETARIA</srai>,preguntas.aiml
+0,* HORA * ATIENCION AL PUBLICO ^,*,*,<srai>HORARIOSECRETARIA</srai>,preguntas.aiml
+0,* HORA ^ ATENDIDEN AL PUBLICO ^,*,*,<srai>HORARIOSECRETARIA</srai>,preguntas.aiml
+0,* HORA * ATENDER ^,*,*,<srai>HORARIOSECRETARIA</srai>,preguntas.aiml
+0,* ATIENDE AL PUBLICO ^ LA SECRETARIA ^,*,*,<srai>HORARIOSECRETARIA</srai>,preguntas.aiml
+0,PAT,*,*,El Plan de Accion Titorial (PAT) de la ESEI es un programa de atencion personalizada dirigida al alumno de nuevo ingreso que vela por la integracion de estos en la vida universitaria.,preguntas.aiml
+0,^ <SET>SINONIMOSPAT</SET> ^,*,*,<srai>PAT</srai>,preguntas.aiml
+0,NECESIDADESESPECIALES,*,*,Un alumno que tenga necesidades educativas especiales tiene derecho al siguiente protocolo de acogida:#NewlinePrimero se comunica al centro el nombre el alumno para dar a conocerlo entre la Dirección del Centro y el profesorado. Despues#Comma el alumno debera presentarse ante todos los profesores que le vayan a impartir clases. Por ultimo#Comma se informara al profesorado de un programa de atencion personalizado en caso de ser necesario.,preguntas.aiml
+0,* PROTOCOLO DE ACOGIDA * <SET>NECESIDADESESPECIALES</SET>,*,*,<srai>NECESIDADESESPECIALES</srai>,preguntas.aiml
+0,* <SET>NECESIDADESESPECIALES</SET> * PROTOCOLO DE ACOGIDA,*,*,<srai>NECESIDADESESPECIALES</srai>,preguntas.aiml
+0,DELEGACIONALUMNOS,*,*,Si#Comma la ESEIDA. Cada dos años los estudiantes eligen a sus representantes de la ESEI y de la UVigo. Puedes contactar con la Delegación mediante el correo eseida@esei.uvigo.es .,preguntas.aiml
+0,* DELEGACION DE ALUMNOS * <SET>SINONIMOSESEI</SET>,*,*,<srai>DELEGACIONALUMNOS</srai>,preguntas.aiml
+0,* <SET>SINONIMOSESEI</SET> * DELEGACION DE ALUMNOS,*,*,<srai>DELEGACIONALUMNOS</srai>,preguntas.aiml
+0,SUPLEMENTOEUROPEO,*,*,El Suplemento Europeo al Titulo es un documento que contiene información sobre los estudios que cursaste#Comma los resultados que obtuviste en las asignaturas y las capacidades profesionales y personales que adquiriste en tu formacion.,preguntas.aiml
+0,* SUPLEMENTO EUROPEO AL TITULO,*,*,<srai>SUPLEMENTOEUROPEO</srai>,preguntas.aiml
+0,EL SUPLEMENTO EUROPEO AL TITULO *,*,*,<srai>SUPLEMENTOEUROPEO</srai>,preguntas.aiml
+0,PRACTICASESEI,*,*,Ya seas un alumno de Grado o Master#Comma puedes realizar tanto practicas curriculares (durante el curso) como extracurriculares (en vacaciones) en empresas para poder complementar tus estudios y asi terminar la carrera con una pequeña formacion laboral.,preguntas.aiml
+0,* <SET>SINONIMOSTIPO</SET> DE PRACTICAS ^,*,*,<srai>PRACTICASESEI</srai>,preguntas.aiml
+0,DONDE PRACTICAS,*,*,La ESEI publica al principio del cuatrimestre las ofertas de practicas para el mismo en el siguiente enlace: https://esei.uvigo.es/docencia/practicas-en-empresa#NewlinePor otro lado si quieres realizar practicas extracurriculares puedes negociar tu mismo con la empresa las condiciones de las prácticas y que luego esta firme un convenio con la universidad para que te convaliden las horas.,preguntas.aiml
+0,* OFERTA DE PRACTICAS ^,*,*,<srai>DONDE PRACTICAS</srai>,preguntas.aiml
+0,* PRACTICAS ^ OFERTADAS^,*,*,<srai>DONDE PRACTICAS</srai>,preguntas.aiml
+0,RECURSOS,*,*,La ESEI tiene dedicado a la enseñanza una serie de 6 aulas dedicadas a las clases de teoría y 14 aulas dedicadas a las clases practicas. También existen dos salones tipo auditorio#Comma dedicados para charlas#Comma eventos y examenes. #NewlinePero es de especial interés para el alumnado los recursos dedicados al estudio#Comma como una sala de estudio localizada en la planta baja#Comma una sala de libre acceso localizada en el sotano y una serie de seminarios a la disposición del alumnado para estudiar y realizar trabajos en grupo. #NewlineTambien cabe mencionar la conserjeria#Comma la administracion y la delegacion de alumnos son lugares a los que puedes ir a preguntar si tienes alguna duda acerca de la ESEI#Comma además de a mi.,preguntas.aiml
+0,* <SET>SINONIMOSRECURSOS</SET> * <SET>SINONIMOSESEI</SET>,*,*,<srai>RECURSOS</srai>,preguntas.aiml
+0,* <SET>SINONIMOSESEI</SET> * <SET>SINONIMOSRECURSOS</SET> ^,*,*,<srai>RECURSOS</srai>,preguntas.aiml
+0,DONDE * <SET>SINONIMOSESTUDIAR</SET> ^,*,*,<srai>RECURSOS</srai>,preguntas.aiml
+0,TFG,*,*,Es necesario realizar un trabajo al finalizar tanto la carrera como el master. El trabajo ha de ser tutelado por algun profesor del centro. La asignacion de trabajos puede ser directa#Comma por acuerdo propio entre estudiante y profesor; o por peticion#Comma seleccionadas por el alumnado a partir de las propuestas ofrecidas por el profesorado.,preguntas.aiml
+0,QUE * <SET>SINONIMOSTFG</SET> ^,*,*,<srai>TFG</srai>,preguntas.aiml
+0,BIBLIOTECA,*,*,La sede de la biblioteca de la uvigo de Ourense se encuentra en la entrada del campus norte#Comma a lado de la piscina.#Newline	Puedes consultar el catálogo de la biblioteca para ver la disponibilidad de el recurso en el que estés interesado#Comma y si no esta disponible en la sede de Ourense se puede solicitar a otra de las bibliotecas de la Uvigo.#Newline	Puedes ver el catalogo aqui: http://www.perseo.biblioteca.uvigo.es,preguntas.aiml
+0,* BIBLIOTECA ^,*,*,<srai>BIBLIOTECA</srai>,preguntas.aiml
+0,ASISTENCIA,*,*,Los profesores realizan control de asistencia en los examenes y revisiones haciendo un registro donde hay que firmar conforme asististe. En algunos de estos casos es necesario también enseñar el DNI o algún tipo de indentificador para evitar el fraude de identidad.,preguntas.aiml
+0,* JUSTIFICAR ^,*,*,<srai>ASISTENCIA</srai>,preguntas.aiml
+0,DEPORTES,*,*,En la universidad existen muchas opciones para hacer ejercicio#Comma pero si no eres profesional en ningún deporte yo te recomiendo que empieces por una de las clases de inciación en estos. Hay clases muy distintas#Comma por ejemplo bádminton#Comma escalada#Comma tenis#Comma rugby#Comma natación o ajedrez. Aqui puedes ver todas las opciones disponibles a ver si encuentras una que te guste: "https://campusactivo.uvigo.gal/campusactivo/publica/actividad/lista.xhtml,preguntas.aiml
+0,* <SET>DEPORTIVO</SET> ^,*,*,<srai>DEPORTES</srai>,preguntas.aiml

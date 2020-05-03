@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!-- File: primero.aiml -->
+<!-- File: funciones.aiml -->
 <!-- Author: Brais Fontan -->
 <!-- Last modified: 27/03/2020 -->
 
 
 <category>
-<pattern>Envia el siguiente mensaje * tema * a * : *</pattern>
+<pattern>Envia el siguiente mensaje * tema * a <set>mail</set> con texto *</pattern>
 <template>
 	<mail>
 		<subject><star index="2"/></subject>
@@ -17,22 +17,287 @@
 </category>
 
 
-<!-- Regla amigos -->
+<!-- Regla propiedades -->
 <category>
-<pattern>Mis amigos son *</pattern>
-<template><botprop><name>amigos</name><val><star/></val></botprop></template>
+<pattern>Tu * es *</pattern>
+<template><botprop><name><star/></name><val><star index="2"/></val></botprop></template>
 </category>
 
-<!-- Regla agregar pais -->
+<!--Identificacion-->
 <category>
-<pattern>Me gustaria que recordaras que * es un pais</pattern>
-<template><addset><new><star/></new>pais.txt</addset></template>
+<pattern>Soy *</pattern>
+<template><think><set name="username"><star/></set></think>Okay, recordare tu nombre</template>
 </category>
 
-<!-- Regla agregar ciudad -->
+<!--Alta faitic-->
 <category>
-<pattern>Me gustaria que recordaras que la capital de * es *</pattern>
-<template><addmap><new><star/>:<star index="2"/></new>capital.txt</addmap></template>
+<pattern>* alta en faitic</pattern>
+<template>
+	<condition name="username">
+		<li><value>unknown</value>Necesito que te identifiques primero</li>
+		<li>De que asignatura quieres que te de el alta</li>
+	</condition>
+</template>
+</category>
+
+<category>
+<pattern>^ <set>asignaturas</set> ^</pattern>
+<that>De que asignatura quieres que te de el alta</that>
+<template>
+		<mail>
+			<subject>Alta en faitic</subject>
+			<to><map name="mail">master</map></to>
+			<msg>Saludos, soy <get name="username"/> y quisiera inscribirme en la materia <star index="2"/> para este curso</msg>
+		</mail>
+</template>
+</category>
+
+<!--Cambio asignatura-->
+<category>
+<pattern>Solicita ^ grupo reducido ^</pattern>
+<template>
+	<condition name="username">
+		<li><value>unknown</value>Necesito que te identifiques primero</li>
+		<li>De que asignatura quieres que solicite el cambio de grupo reducido</li>
+	</condition>
+</template>
+</category>
+
+<category>
+<pattern>^ <set>asignaturas</set> ^</pattern>
+<that>De que asignatura quieres que solicite el cambio de grupo reducido</that>
+<template><think><set name="asignatura"><star index="2"/></set></think>Y a que grupo quieres cambiarte</template>
+</category>
+
+<category>
+<pattern>* grupo *</pattern>
+<that>Y a que grupo quieres cambiarte</that>
+<template>
+		<mail>
+			<subject>Solicitud cambio de grupo reducido</subject>
+			<to><map name="mail">master</map></to>
+			<msg>Saludos, soy <get name="username"/> y quisiera cambiarme de grupo reducido en la materia <get name="asignatura"/> para el grupo <star index="2"/></msg>
+		</mail>
+</template>
+</category>
+
+<!--Reserva seminario-->
+<category>
+<pattern>^ reserva * seminario</pattern>
+<template>
+	<condition name="username">
+		<li><value>unknown</value>Necesito que te identifiques primero</li>
+		<li>Para cuando quieres la reserva del seminario</li>
+	</condition>
+</template>
+</category>
+
+<category>
+<pattern>Para *</pattern>
+<that>Para cuando quieres la reserva del seminario</that>
+<template><think><set name="tiempo"><star/></set></think>Quieres reservar un seminario en concreto o te da igual</template>
+</category>
+
+<category>
+<pattern>Si el seminario *</pattern>
+<that>Quieres reservar un seminario en concreto o te da igual</that>
+<template>
+		<mail>
+			<subject>Reserva seminario</subject>
+			<to><map name="mail">master</map></to>
+			<msg>Saludos, soy <get name="username"/> y quisiera hacer una reserva del seminario <star/> para <get name="tiempo"/> de ser posible</msg>
+		</mail>
+</template>
+</category>
+
+<category>
+<pattern>No ^</pattern>
+<that>Quieres reservar un seminario en concreto o te da igual</that>
+<template>
+		<mail>
+			<subject>Reserva seminario</subject>
+			<to><map name="mail">master</map></to>
+			<msg>Saludos, soy <get name="username"/> y quisiera hacer una reserva de un seminario libre para <get name="tiempo"/> de ser posible</msg>
+		</mail>
+</template>
+</category>
+
+<!--Practicas en empresas-->
+<category>
+<pattern>^ solicitar practicas ^</pattern>
+<template>
+	<condition name="username">
+		<li><value>unknown</value>Necesito que te identifiques primero</li>
+		<li>Puedes realizar 150h o 300h en función de cuantos creditos quieras convalidar</li>
+	</condition>
+</template>
+</category>
+
+<category>
+<pattern>Quiero realizar *</pattern>
+<that>Puedes realizar 150h o 300h en función de cuantos creditos quieras convalidar</that>
+<template><think><set name="horas"><star/></set></think>En que empresa quieres realizar las practicas</template>
+</category>
+
+<category>
+<pattern>^ empresa *</pattern>
+<that>En que empresa quieres realizar las practicas</that>
+<template>
+		<mail>
+			<subject>Solicitud practicas</subject>
+			<to><map name="mail">master</map></to>
+			<msg>Saludos, soy <get name="username"/> y quisiera hacer una solicitud de practicas de <get name="horas"/> en la empresa <star index="2"/></msg>
+		</mail>
+</template>
+</category>
+
+<!--Practicas en empresas-->
+<category>
+<pattern>^ solicitar practicas ^</pattern>
+<template>
+	<condition name="username">
+		<li><value>unknown</value>Necesito que te identifiques primero</li>
+		<li>Puedes realizar 150h o 300h en función de cuantos creditos quieras convalidar</li>
+	</condition>
+</template>
+</category>
+
+<category>
+<pattern>Quiero realizar *</pattern>
+<that>Puedes realizar 150h o 300h en función de cuantos creditos quieras convalidar</that>
+<template><think><set name="horas"><star/></set></think>En que empresa quieres realizar las practicas</template>
+</category>
+
+<category>
+<pattern>^ empresa *</pattern>
+<that>En que empresa quieres realizar las practicas</that>
+<template>
+		<mail>
+			<subject>Solicitud practicas</subject>
+			<to><map name="mail">master</map></to>
+			<msg>Saludos, soy <get name="username"/> y quisiera hacer una solicitud de practicas de <get name="horas"/> en la empresa <star index="2"/></msg>
+		</mail>
+</template>
+</category>
+
+<!--Asignacion Tfg-->
+<category>
+<pattern>Solicita ^ asignacion del <set>sinonimostfg</set> <set>listatfg</set></pattern>
+<template>
+	<condition name="username">
+		<li><value>unknown</value>Necesito que te identifiques primero</li>
+		<li><think><set name="tfg"><star index="3"/></set></think>
+			<mail>
+			<subject>Solicitud asignacion TFG</subject>
+			<to><map name="mail">master</map></to>
+			<msg>Saludos, soy <get name="username"/> y quisiera solicitar la asignacion del TFG <star index="3"/></msg>
+		</mail>
+		</li>
+	</condition>
+</template>
+</category>
+
+<category>
+<pattern>Solicita ^ asignacion del <set>sinonimostfg</set> *</pattern>
+<template>
+	<condition name="username">
+		<li><value>unknown</value>Necesito que te identifiques primero</li>
+		<li><think><set name="tfg"><star index="3"/></set></think>Ese TFG no esta presentado por ningun profesor que profesor quieres que te tutele</li>
+	</condition>
+</template>
+</category>
+
+<category>
+<pattern>^ <set>profesores</set> ^</pattern>
+<that>Ese TFG no esta presentado por ningun profesor que profesor quieres que te tutele</that>
+	<template>
+		<mail>
+			<subject>Solicitud asignacion TFG</subject>
+			<to><map name="mail">master</map></to>
+			<msg>Saludos, soy <get name="username"/> y quisiera solicitar al profesor <star index="2"/> que me tutele en la realizacion de un tfg titulado <get name="tfg"/></msg>
+		</mail>
+	</template>
+</category>
+
+<!--Defensa Tfg-->
+<category>
+<pattern>Solicita ^ defensa de mi <set>sinonimostfg</set></pattern>
+<template>
+	<condition name="username">
+		<li><value>unknown</value>Necesito que te identifiques primero</li>
+		<li>
+			<condition name="tfg">
+				<li><value>unknown</value>No se que TFG estas haciendo</li>
+				<li>
+					<mail>
+						<subject>Solicitud defensa TFG</subject>
+						<to><map name="mail">master</map></to>
+						<msg>Saludos, soy <get name="username"/> y quiero establecer una fecha para la defensa de mi TFG <get name="tfg"/></msg>
+					</mail>
+				</li>
+			</condition>
+		</li>
+	</condition>
+</template>
+</category>
+
+<category>
+<pattern>Estoy haciendo el <set>sinonimostfg</set> *</pattern>
+<template><think><set name="tfg"><star index="2"/></set></think>Okay, recordare que estas haciendo ese tfg</template>
+</category>
+
+<!--Evaluacion por compensacion-->
+<category>
+<pattern>^ solicitar la evaluacion por compensacion de <set>asignaturas</set></pattern>
+<template>
+	<condition name="username">
+		<li><value>unknown</value>Necesito que te identifiques primero</li>
+		<li>
+			<mail>
+				<subject>Solicitud evaluacion por compensacion</subject>
+				<to><map name="mail">master</map></to>
+				<msg>Saludos, soy <get name="username"/> y quiero solicitar la evaluacion por compensación de <star index="2"/> dado que cumplo los requisitos necesarios para solicitarla</msg>
+			</mail>
+		</li>
+	</condition>
+</template>
+</category>
+
+
+<!--Crear set-->
+<category>
+<pattern>Crea el set *</pattern>
+<template><addset><star/></addset></template>
+</category>
+
+<!--Anhadir a un set-->
+<category>
+<pattern>Anhade el valor * a el set *</pattern>
+<template><addset><new><star/></new><star index="2"/></addset></template>
+</category>
+
+<!--Crea el map-->
+<category>
+<pattern>Crea el map *</pattern>
+<template><addmap><star/></addmap></template>
+</category>
+
+<!--Anhadir a un map-->
+<category>
+<pattern>Anhade la relacion * tiene * a el map *</pattern>
+<template><addmap><new><star/>:<star index="2"/></new><star index="3"/></addmap></template>
+</category>
+
+<!--crear fichero-->
+<category>
+<pattern>crea el fichero *</pattern>
+<template><file><star/></file></template>
+</category>
+
+<!--escribir fichero-->
+<category>
+<pattern>Anhade la linea * a el fichero *</pattern>
+<template><addtxt><txt><star/></txt> to <file><star index="2"/></file> </addtxt></template>
 </category>
 
 </aiml>

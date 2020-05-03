@@ -1,0 +1,4 @@
+espanha:madrid
+francia:paris
+italia:roma
+dinamarca:copenhague

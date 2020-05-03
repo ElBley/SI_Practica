@@ -666,7 +666,7 @@ Tambien cabe mencionar la conserjeria, la administracion y la delegacion de alum
 
 <!-- Regla 15v2 -->
 <category>
-<pattern>* <set>sinonimostfg</set> ^</pattern> <!-- Qué son los Trabajos Fin de Grado o de Máster -->
+<pattern>Que * <set>sinonimostfg</set> ^</pattern> <!-- Qué son los Trabajos Fin de Grado o de Máster -->
 <template><srai>TFG</srai></template>
 </category>
 
