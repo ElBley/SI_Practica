@@ -241,8 +241,6 @@ filter(Answer,Tag,Msg) :-
 
 	
 +answer(Answer) : not filter(Answer, Tag, Msg) & numAnswer(N) <- 
-	-answer(Answer)[source(percept)];
-	-answer(Answer)[source(master)];
 	-+numAnswer(N+1);
 	+respuesta(N, Answer);
 	.println("=======================================================================");
@@ -250,6 +248,7 @@ filter(Answer,Tag,Msg) :-
 	.println("Student: Acabo de recibir del bot la contestacion: ", Answer);
 	.println;
 	.println("=======================================================================");
+	-answer(Answer);
 	.wait(1000);
 	if(.substring("Quieres que te hable sobre",Answer)){
 		chat("Si");

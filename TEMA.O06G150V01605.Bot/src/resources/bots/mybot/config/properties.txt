@@ -4,4 +4,6 @@ email:callmom-info@pandorabots.com
 gender:male
 botmaster:Dr. Richard S. Wallace
 organization:ALICE AI Foundation
-version:0.0.4
+version:0.0.4master:brais fontan
+master:brais fontan
+master:brais fontan
